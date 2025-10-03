@@ -24,4 +24,5 @@ float playY3 = divY + divHeight * 3/4;
 rect(divX, divY, divWidth, divHeight); ////Group of Variables
 //
 //Library of Symbols, requires DIVs
-triangle(playX1, playY1, playX2, playY2, playX3, playY3); //Group of Variables
+rect(X, Y, Width, Height);
+//triangle(playX1, playY1, playX2, playY2, playX3, playY3); //Group of Variables
