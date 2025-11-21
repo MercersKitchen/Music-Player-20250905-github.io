@@ -7,7 +7,13 @@
 size(500, 700); //Portrait
 int appWidth = displayWidth; //width
 int appHeight = displayHeight; //height
-println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\t\t\t\t\t\tFullScreen, displayWidth:"+displayWidth, "displayHeight:"+displayHeight, "\n\t\t\t\t\t\t\t\t\tSize\t\t, width:"+width, "height:"+height);
+//println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\t\t\t\t\t\tFullScreen, displayWidth:"+displayWidth, "displayHeight:"+displayHeight, "\n\t\t\t\t\t\t\t\t\tSize\t\t, width:"+width, "height:"+height);
 //
 //Image Aspect Ratio Vars & Algorithm
-//Directory or Pathway
+//Directory or Pathway, Concatenation
+String upArrow = "../../";
+String folder = "Lesson Dependancies Folder/Images/"; //**Akward
+String bike = "bike";
+String fileExtensionJPG = ".jpg";
+String imagePathway1 = upArrow + folder + bike + fileExtensionJPG;
+println("Bike Pathway:", imagePathway1);
