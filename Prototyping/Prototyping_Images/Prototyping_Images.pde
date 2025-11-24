@@ -28,9 +28,11 @@ PImage image1 = loadImage( imagePathway1 );
 int imageWidth1 = 860; //Hardcoded
 int imageHeight1 = 529; //Hardcoded
 //Aspect Ratio
-//float image1AspectRatio_GreaterOne = () ? : ;
+float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? imageWidth1/imageHeight1 : imageHeight1/imageWidth1 ; //Ternary Operator
+//Hardcoded Greater-Than-One Aspect Ratio
 //
 //DIV
 rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 //
-image( image1, imageDivX, imageDivY, imageWidthAdjusted, imageHeightAdjusted );
+image( image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight );
+//image( image1, imageDivX, imageDivY, imageWidthAdjusted, imageHeightAdjusted );
