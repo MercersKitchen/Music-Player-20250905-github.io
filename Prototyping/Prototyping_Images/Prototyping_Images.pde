@@ -32,7 +32,7 @@ float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(ima
 //Hardcoded Greater-Than-One Aspect Ratio
 //How to make image bigger or smaller
 //ERROR: truncating, casting
-println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for Decimals, formuale", imageWidth1/imageHeight1);
+println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for Decimals, formula", imageWidth1/imageHeight1);
 //DIV
 rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 //
