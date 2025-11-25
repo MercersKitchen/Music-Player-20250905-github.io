@@ -33,6 +33,11 @@ float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(ima
 //How to make image bigger or smaller
 //ERROR: truncating, casting
 println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for Decimals, formula", imageWidth1/imageHeight1);
+//Algorithm Decisions (choice)
+if () {} else {} //End IF Aspect Ratio
+
+
+
 //DIV
 rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 //
