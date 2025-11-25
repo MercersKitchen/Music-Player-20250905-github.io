@@ -28,7 +28,7 @@ PImage image1 = loadImage( imagePathway1 );
 int imageWidth1 = 860; //Hardcoded
 int imageHeight1 = 529; //Hardcoded
 //Aspect Ratio
-float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? imageWidth1/imageHeight1 : imageHeight1/imageWidth1 ; //Ternary Operator
+float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(imageWidth1)/float(imageHeight1) : float(imageHeight1)/float(imageWidth1) ; //Ternary Operator
 //Hardcoded Greater-Than-One Aspect Ratio
 //How to make image bigger or smaller
 println(image1AspectRatio_GreaterOne);
