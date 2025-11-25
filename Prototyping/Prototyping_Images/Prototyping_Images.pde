@@ -13,7 +13,7 @@ int appHeight = displayHeight; //height
 float imageDivX = appWidth*1/4; //**Akward DIV
 float imageDivY = appHeight*1/10;
 float imageDivWidth = appWidth*1/2;
-float imageDivHeight = appHeight*4/5;
+float imageDivHeight = appHeight*4/5; //** Make smaller to test Landscape
 //
 //Image Aspect Ratio Vars & Algorithm
 //Directory or Pathway, Concatenation
