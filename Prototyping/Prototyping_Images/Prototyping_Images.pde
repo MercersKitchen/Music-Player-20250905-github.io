@@ -34,7 +34,15 @@ float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(ima
 //ERROR: truncating, casting
 println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for Decimals, formula", imageWidth1/imageHeight1);
 //Algorithm Decisions (choice)
-if () {} else {} //End IF Aspect Ratio
+//Aspect Ratio
+/*
+imageWidth1
+imageDivWidth
+imageHeight1
+imageDivHeight
+imageDivWidth, imageDivHeight
+*/
+//if () {} else {} //End IF Aspect Ratio
 
 
 
