@@ -45,7 +45,6 @@ float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(ima
 float imageWidthAdjusted1 = imageDivWidth;
 float imageHeightAdjusted = ( imageWidth1 >= imageDivWidth ) ? imageWidthAdjusted1 / image1AspectRatio_GreaterOne : imageWidthAdjusted1 * image1AspectRatio_GreaterOne ; //Ternary Operator
 
-, 
 /*
 imageWidth1
 imageDivWidth
