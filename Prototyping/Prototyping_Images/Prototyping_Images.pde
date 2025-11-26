@@ -39,11 +39,13 @@ float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(ima
 - Computer calculated DIV width & height
 - Computer needs to compare image to DIV size difference
 */
-println("Testing for Decimals, formula unsing ints:", imageWidth1/imageHeight1);
-println("After casting added, Aspect Ratio >1:", image1AspectRatio_GreaterOne);
-
+//println("Testing for Decimals, formula unsing ints:", imageWidth1/imageHeight1);
+//println("After casting added, Aspect Ratio >1:", image1AspectRatio_GreaterOne);
 //Algorithm Decisions (choice)
-//Aspect Ratio
+float imageWidthAdjusted1 = imageDivWidth;
+float imageHeightAdjusted = ( imageWidth1 >= imageDivWidth ) ? imageWidthAdjusted1 / image1AspectRatio_GreaterOne : imageWidthAdjusted1 * image1AspectRatio_GreaterOne; //Ternary Operator
+
+, 
 /*
 imageWidth1
 imageDivWidth
