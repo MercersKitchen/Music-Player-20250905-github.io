@@ -1,13 +1,15 @@
 /* Aspect Ratio: Bike Only Demonstration
-- Old Man 
+- Old Man using arrays
+- introduction: set index manually
 */
 //
 //Display
 fullScreen(); //Landscape
-//size(500, 700); //Portrait
+//size(500, 700); //Portrait, testing smaller DIVs ONLY
 int appWidth = displayWidth; //width
 int appHeight = displayHeight; //height
-//println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\t\t\t\t\t\tFullScreen, displayWidth:"+displayWidth, "displayHeight:"+displayHeight, "\n\t\t\t\t\t\t\t\t\tSize\t\t, width:"+width, "height:"+height);
+//println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight);
+//println("\t\t\t\tFullScreen, displayWidth:\t"+displayWidth, "\tdisplayHeight:\t"+displayHeight, "\n\t\t\t\tSize\t, width:\t\t"+width, "\theight:\t\t"+height);
 //
 //Population
 float imageDivX = appWidth*1/4; //**Akward DIV
@@ -29,10 +31,17 @@ int imageWidth1 = 860; //Hardcoded
 int imageHeight1 = 529; //Hardcoded
 //Aspect Ratio
 float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(imageWidth1)/float(imageHeight1) : float(imageHeight1)/float(imageWidth1) ; //Ternary Operator
-//Hardcoded Greater-Than-One Aspect Ratio
-//How to make image bigger or smaller
-//ERROR: truncating, casting
-println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for Decimals, formula", imageWidth1/imageHeight1);
+//ERROR, int populating float: truncating-adding zeros, casting
+/* Line Notes
+- Hardcoded Greater-Than-One Aspect Ratio, x or / >1 or <1
+- 2D information from Image, Apsect Ratio Number
+- Answers how to make image bigger or smaller
+- Computer calculated DIV width & height
+- Computer needs to compare image to DIV size difference
+*/
+println("Testing for Decimals, formula unsing ints:", imageWidth1/imageHeight1);
+println("After casting added, Aspect Ratio >1:", image1AspectRatio_GreaterOne);
+
 //Algorithm Decisions (choice)
 //Aspect Ratio
 /*
@@ -51,3 +60,5 @@ rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 //
 image( image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 //image( image1, imageDivX, imageDivY, imageWidthAdjusted, imageHeightAdjusted );
+//
+//End Program
