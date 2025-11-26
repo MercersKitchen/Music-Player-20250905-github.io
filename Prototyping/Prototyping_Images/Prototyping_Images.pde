@@ -43,23 +43,17 @@ float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(ima
 //println("After casting added, Aspect Ratio >1:", image1AspectRatio_GreaterOne);
 //Algorithm Decisions (choice)
 float imageWidthAdjusted1 = imageDivWidth;
-float imageHeightAdjusted = ( imageWidth1 >= imageDivWidth ) ? imageWidthAdjusted1 / image1AspectRatio_GreaterOne : imageWidthAdjusted1 * image1AspectRatio_GreaterOne ; //Ternary Operator
-
-/*
-imageWidth1
-imageDivWidth
-imageHeight1
-imageDivHeight
-imageDivWidth, imageDivHeight
-*/
-//if () {} else {} //End IF Aspect Ratio
-
-
-
+float imageHeightAdjusted1 = ( imageWidth1 >= imageDivWidth ) ? imageWidthAdjusted1 * image1AspectRatio_GreaterOne : imageWidthAdjusted1 / image1AspectRatio_GreaterOne ; //Ternary Operator
+//Verification: looks good
+if (imageHeightChanged1>imageDivHeight) {
+  
+  
+  
+//
 //DIV
 rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 //
-image( image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight );
-//image( image1, imageDivX, imageDivY, imageWidthAdjusted, imageHeightAdjusted );
+//image( image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight );
+image( image1, imageDivX, imageDivY, imageWidthAdjusted1, imageHeightAdjusted1 );
 //
 //End Program
