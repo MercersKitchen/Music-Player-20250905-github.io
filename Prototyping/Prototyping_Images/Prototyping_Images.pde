@@ -4,10 +4,10 @@
 */
 //
 //Display
-fullScreen(); //Landscape
-//size(500, 700); //Portrait, testing smaller DIVs ONLY
-int appWidth = displayWidth; //width
-int appHeight = displayHeight; //height
+//fullScreen(); //Landscape
+size(500, 250); //Portrait, testing smaller DIVs ONLY
+int appWidth = width; //displayWidth
+int appHeight = height; //displayHeight
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight);
 //println("\t\t\t\tFullScreen, displayWidth:\t"+displayWidth, "\tdisplayHeight:\t"+displayHeight, "\n\t\t\t\tSize\t, width:\t\t"+width, "\theight:\t\t"+height);
 //
@@ -45,10 +45,11 @@ float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(ima
 float imageWidthAdjusted1 = imageDivWidth;
 float imageHeightAdjusted1 = ( imageWidth1 >= imageDivWidth ) ? imageWidthAdjusted1 * image1AspectRatio_GreaterOne : imageWidthAdjusted1 / image1AspectRatio_GreaterOne ; //Ternary Operator
 //Verification: looks good
-if (imageHeightChanged1>imageDivHeight) {
-  
-  
-  
+if ( imageHeightAdjusted1 > imageDivHeight ) {
+  println("Image doesn't fit, program ended ... Fatal Flaw, must be solved ... Image doesn't show.");
+  exit();
+  //
+}
 //
 //DIV
 rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
