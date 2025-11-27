@@ -28,7 +28,7 @@ String imagePathway1 = upArrow + folder + bike + fileExtensionJPG;
 //Image Loading & Aspect Ratio
 //
 //Possible ERROR: NullPointerException on the Image
-PImage errorImage = loadImage( "errorImage.png" );
+PImage errorImage = loadImage( "Old man portrait.png" );
 PImage image1 = loadImage( imagePathway1 ); //i.e. pathway mispelled
 if ( image1 == null ) {
   println("NullPointerException on Image ... Spelling Mistake with Pathway Concatenation");
