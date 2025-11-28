@@ -71,10 +71,30 @@ if ( imageHeightAdjusted1 > imageDivHeight ) {
       imageHeightAdjusted1=imageDivHeight; //makes WHILE False, stops WHILE
     } //End Check Infinite loop
     //Image Adjustment Percent v Pixel
-    imageWidthAdjusted1 -= 1; // *= 0.99
+    imageWidthAdjusted1 *= 0.70; // -= 1
     imageHeightAdjusted1 = imageWidthAdjusted1/image1AspectRatio_GreaterOne;
     println("Inspection of percent decrase:", imageWidthAdjusted1, imageHeightAdjusted1, imageDivHeight);
   } //End WHILE
+  //Percent will be too small, must count back up but be smaller than total iterations
+  /* Accuracy Comment, for AP Students
+   - When % change is too much, go back to the previous answer, decrease percent until decreasing pixels is most accurate
+   - Need to answer what is accurate
+   - FYI: 1% gets within 3 pixels of actual answer
+   - AP Project: combine into faster answer by counting lines of code executed
+   */
+  while ( imageHeightAdjusted1<imageDivHeight ) {
+    println("Iteration of Pixel WHILE Loop", indexWhile++); //prints value, then adds one, order is important in AP
+    if ( indexWhile < 10000 ) {
+      //Checking Image Size
+    } else {
+      //ERROR: Infinite Loop
+      println("ERROR: infinite loop, Image Pixel WHILE, value:", indexWhile);
+      //exit(); //doesn't work, must force WHILE Stop
+      imageHeightAdjusted1=imageDivHeight;
+    }
+    imageHeightAdjusted1++;
+    println("Inspection of percent dcrease:", imageWidthAdjusted1, imageHeightAdjusted1, imageDivHeight);
+  } //End WHILE Error Check, Counting Up
   //
 } //END IF
 //
