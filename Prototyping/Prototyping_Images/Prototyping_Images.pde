@@ -15,7 +15,7 @@ int appHeight = height; //displayHeight
 float imageDivX = appWidth*1/4; //**Akward DIV
 float imageDivY = appHeight*1/10;
 float imageDivWidth = appWidth*1/2;
-float imageDivHeight = appHeight*4/5; //** Make smaller to test Landscape
+float imageDivHeight = appHeight*1/5; //  4/5  ** Make smaller to test Landscape
 //
 //Image Aspect Ratio Vars & Algorithm
 //Directory or Pathway, Concatenation
@@ -70,9 +70,9 @@ if ( imageHeightAdjusted1 > imageDivHeight ) {
       exit(); //doesn't work, must force WHILE Stop
       imageHeightAdjusted1=imageDivHeight; //makes WHILE False, stops WHILE
     } //End Check Infinite loop
-    //imageWidthAdjusted1 *= 0.99;
-    //imageHeightAdjusted1 = imageWidthAdjusted1/image1AspectRatio_GreaterOne;
-    //println("Inspection of percent decrase:", imageWidthAdjusted1, imageHeightAdjusted1, imageDivHeight);
+    imageWidthAdjusted1 *= 0.99;
+    imageHeightAdjusted1 = imageWidthAdjusted1/image1AspectRatio_GreaterOne;
+    println("Inspection of percent decrase:", imageWidthAdjusted1, imageHeightAdjusted1, imageDivHeight);
   } //End WHILE
   //
 } //END IF
