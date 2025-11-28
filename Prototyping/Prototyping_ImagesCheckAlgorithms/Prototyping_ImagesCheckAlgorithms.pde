@@ -1,13 +1,12 @@
-/* Aspect Ratio: Bike Only Demonstration
- - Old Man using arrays
- - introduction: set index manually
+/* Handling Errors, including resizing image automatically
+ - NullPointerException on the Image-Variable
  */
 //
 //Display
-//fullScreen(); //Landscape
-size(500, 250); //Portrait, testing smaller DIVs ONLY
-int appWidth = width; //displayWidth
-int appHeight = height; //displayHeight
+fullScreen(); //Landscape
+//size(500, 250); //Portrait, testing smaller DIVs ONLY
+int appWidth = displayWidth; //width
+int appHeight = displayHeight; //height
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight);
 //println("\t\t\t\tFullScreen, displayWidth:\t"+displayWidth, "\tdisplayHeight:\t"+displayHeight, "\n\t\t\t\tSize\t, width:\t\t"+width, "\theight:\t\t"+height);
 //
@@ -15,7 +14,7 @@ int appHeight = height; //displayHeight
 float imageDivX = appWidth*1/4; //**Akward DIV
 float imageDivY = appHeight*1/10;
 float imageDivWidth = appWidth*1/2;
-float imageDivHeight = appHeight*1/5; //  4/5  ** Make smaller to test Landscape
+float imageDivHeight = appHeight*4/5; // ** Make smaller to test height
 //
 //Image Aspect Ratio Vars & Algorithm
 //Directory or Pathway, Concatenation
@@ -27,8 +26,10 @@ String imagePathway1 = upArrow + folder + bike + fileExtensionJPG;
 //println("Bike Pathway:", imagePathway1);
 //Image Loading & Aspect Ratio
 //
-//Possible ERROR: NullPointerException on the Image
+//Possible ERROR: NullPointerException on the Image-Variable
 PImage errorImage = loadImage( "Old man portrait.png" );
+//Error image without need for pathway
+//Error image allows image() to be completed, notifying user of error
 PImage image1 = loadImage( imagePathway1 ); //i.e. pathway mispelled
 if ( image1 == null ) {
   println("NullPointerException on Image ... Spelling Mistake with Pathway Concatenation");
