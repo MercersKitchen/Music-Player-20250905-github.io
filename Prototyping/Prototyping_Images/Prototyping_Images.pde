@@ -70,7 +70,8 @@ if ( imageHeightAdjusted1 > imageDivHeight ) {
       exit(); //doesn't work, must force WHILE Stop
       imageHeightAdjusted1=imageDivHeight; //makes WHILE False, stops WHILE
     } //End Check Infinite loop
-    imageWidthAdjusted1 *= 0.99;
+    //Image Adjustment Percent v Pixel
+    imageWidthAdjusted1 -= 1; // *= 0.99
     imageHeightAdjusted1 = imageWidthAdjusted1/image1AspectRatio_GreaterOne;
     println("Inspection of percent decrase:", imageWidthAdjusted1, imageHeightAdjusted1, imageDivHeight);
   } //End WHILE
