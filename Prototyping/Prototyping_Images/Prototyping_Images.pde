@@ -63,11 +63,12 @@ if ( imageHeightAdjusted1 > imageDivHeight ) {
   while ( imageHeightAdjusted1>imageDivHeight ) {
     println("Iteration of Percent WHILE Loop", indexWhile++); //prints value, then adds one, order is important in AP
     if ( indexWhile < 10000 ) {
-      //Checking Image Size
+      //Checking Image Size, below
     } else {
       //ERROR: Infinite Loop
       println("ERROR: infinite loop, Image Percent WHILE, value:", indexWhile);
-      exit();
+      exit(); //doesn't work, must force WHILE Stop
+      imageHeightAdjusted1=imageDivHeight; //makes WHILE False, stops WHILE
     } //End Check Infinite loop
     //imageWidthAdjusted1 *= 0.99;
     //imageHeightAdjusted1 = imageWidthAdjusted1/image1AspectRatio_GreaterOne;
