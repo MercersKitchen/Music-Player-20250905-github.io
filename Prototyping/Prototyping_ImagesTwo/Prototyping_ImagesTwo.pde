@@ -5,7 +5,7 @@
 //
 //Display
 //fullScreen(); //Landscape
-size(500, 250); //Portrait, testing smaller DIVs ONLY
+size(500, 100); //Portrait, testing smaller DIVs ONLY
 int appWidth = width; //displayWidth
 int appHeight = height; //displayHeight
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight);
@@ -18,31 +18,50 @@ float imageDivWidth = appWidth*1/2;
 float imageDivHeight = appHeight*4/5; // ** Make smaller to test height
 //
 //Image Aspect Ratio Vars & Algorithm
+int numberOfImages = 2; //Best Practice
+int i = 0; //index for ARRAYs
+/* Index Legend for Images
+ i=0 // Bike
+ i=1 // Old Man
+ */
 //Directory or Pathway, Concatenation
 String upArrow = "../../";
 String folder = "Lesson Dependancies Folder/Images/"; //**Akward
-String bike = "bike";
-String fileExtensionJPG = ".jpg";
-String imagePathway1 = upArrow + folder + bike + fileExtensionJPG;
-//println("Bike Pathway:", imagePathway1);
+String[] fileName = new String[numberOfImages];
+fileName[0] = "bike"; //Rename-Copy OS Function & MouseClick
+fileName[1] = "Old man portrait"; //Rename-Copy OS Function & MouseClick
+String[] fileExtension = new String[numberOfImages];
+fileExtension[0] = ".jpg"; //What is leftover after rename function
+fileExtension[1] = ".png"; //What is leftover after rename function
+String[] imagePathway = new String[numberOfImages];
+imagePathway[i] = upArrow + folder + fileName[i] + fileExtension[i];
+//println(imagePathway[i]);
+//Note: Computer should be able to read a directory or pathway (intermediate code)
 //Image Loading & Aspect Ratio
-//
 //Possible ERROR: NullPointerException on the Image-Variable
-PImage errorImage = loadImage( "Old man portrait.png" );
+int numberOfErrorImages = 1; //Best Practice, but not used here
+PImage[] image = new PImage[numberOfImages];
+image[i] = loadImage( imagePathway[i] ); //Emphasizes numbers so computer will track, human does not
+//Can be summarized with FOR Loop
+//ERROR Check: loadImage()
+PImage errorImage = loadImage( "Old man ERROR.png" );
 //Error image without need for pathway
 //Error image allows image() to be completed, notifying user of error
-PImage image1 = loadImage( imagePathway1 ); //i.e. pathway mispelled
-if ( image1 == null ) {
+//Demonstrates alternate way to load an image without a pathway
+if ( image[i] == null ) {
   println("NullPointerException on Image ... Spelling Mistake with Pathway Concatenation");
-  image1 = errorImage;
+  image[i] = errorImage;
   exit(); //handled whenever the computer uses this part or Memory
 }
-//Demonstrates alternate way to load an image without a pathway
-//
-int imageWidth1 = 860; //Hardcoded
-int imageHeight1 = 529; //Hardcoded
+int[] imageWidth = new int[numberOfImages];
+int[] imageHeight = new int[numberOfImages];
+imageWidth[0] = 860; //Hardcoded, computer should be able to read this (Intermediate Code)
+imageHeight[0] = 529; //Hardcoded, see image-properties
+imageWidth[1] = 2800; //Hardcoded, computer should be able to read this (Intermediate Code)
+imageHeight[1] = 3500; //Hardcoded
 //Aspect Ratio
-float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(imageWidth1)/float(imageHeight1) : float(imageHeight1)/float(imageWidth1) ; //Ternary Operator
+//Note: code only executes once, one one Aspect Ratio Var required
+float imageAspectRatio_GreaterOne = ( imageWidth[i] >= imageHeight[i] ) ? float(imageWidth[i])/float(imageHeight[i]) : float(imageHeight[i])/float(imageWidth[i]) ; //Ternary Operator
 //ERROR, int populating float: truncating-adding zeros, casting
 /* Line Notes
  - Hardcoded Greater-Than-One Aspect Ratio, x or / >1 or <1
@@ -51,18 +70,21 @@ float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(ima
  - Computer calculated DIV width & height
  - Computer needs to compare image to DIV size difference
  */
-//println("Testing for Decimals, formula unsing ints:", imageWidth1/imageHeight1);
-//println("After casting added, Aspect Ratio >1:", image1AspectRatio_GreaterOne);
+//println("Testing for Decimals, formula unsing ints:", imageWidth[i]/imageHeight[i]);
+println("After casting added, Aspect Ratio >1:", imageAspectRatio_GreaterOne);
 //Algorithm Decisions (choice)
-float imageWidthAdjusted1 = imageDivWidth;
-float imageHeightAdjusted1 = ( imageWidth1 >= imageDivWidth ) ? imageWidthAdjusted1 * image1AspectRatio_GreaterOne : imageWidthAdjusted1 / image1AspectRatio_GreaterOne ; //Ternary Operator
+float[] imageWidthAdjusted = new float[numberOfImages];
+float[] imageHeightAdjusted = new float[numberOfImages];
+imageWidthAdjusted[i] = imageDivWidth; //works for any image
+imageHeightAdjusted[i] = ( imageWidth[i] >= imageDivWidth ) ? imageWidthAdjusted[i]/imageAspectRatio_GreaterOne : imageWidthAdjusted[i]*imageAspectRatio_GreaterOne ; //Ternary Operator
 //Verification: looks good
-if ( imageHeightAdjusted1 > imageDivHeight ) {
+//IF-statements, include more code than a phrase of
+if ( imageHeightAdjusted[i] > imageDivHeight ) {
   //println("Image doesn't fit, program ended ... Fatal Flaw, must be solved ... Image doesn't show.");
   //exit();
   int indexWhile = 0; //Local Variable to IF-Statement
   //** WHILE Loops can run infinitely with an error if not controlled
-  while ( imageHeightAdjusted1>imageDivHeight ) {
+  while ( imageHeightAdjusted[i]>imageDivHeight ) {
     println("Iteration of Percent WHILE Loop", indexWhile++); //prints value, then adds one, order is important in AP
     if ( indexWhile < 10000 ) {
       //Checking Image Size, below
@@ -70,12 +92,12 @@ if ( imageHeightAdjusted1 > imageDivHeight ) {
       //ERROR: Infinite Loop
       println("ERROR: infinite loop, Image Percent WHILE, value:", indexWhile);
       exit(); //doesn't work, must force WHILE Stop
-      imageHeightAdjusted1=imageDivHeight; //makes WHILE False, stops WHILE
+      imageHeightAdjusted[i]=imageDivHeight; //makes WHILE False, stops WHILE
     } //End Check Infinite loop
     //Image Adjustment Percent v Pixel
-    imageWidthAdjusted1 *= 0.99; // -= 1
-    imageHeightAdjusted1 = imageWidthAdjusted1/image1AspectRatio_GreaterOne;
-    println("Inspection of percent decrase:", imageWidthAdjusted1, imageHeightAdjusted1, imageDivHeight);
+    imageWidthAdjusted[i] *= 0.99; // -= 1
+    imageHeightAdjusted[i] = imageWidthAdjusted[i]/imageAspectRatio_GreaterOne;
+    println("Inspection of percent decrase:", imageWidthAdjusted[i], imageHeightAdjusted[i], imageDivHeight);
   } //End WHILE
   //Percent will be too small, must count back up but be smaller than total iterations
   /* Accuracy Comment, for AP Students
@@ -85,7 +107,7 @@ if ( imageHeightAdjusted1 > imageDivHeight ) {
    - AP Project: combine into faster answer by counting lines of code executed
    */
   /* Teacher ONLY: compare to Percent Decrease for Program Speed, minimum lines of code measure
-   while ( imageHeightAdjusted1<imageDivHeight ) {
+   while ( imageHeightAdjusted[i]<imageDivHeight ) {
    println("Iteration of Pixel WHILE Loop", indexWhile++); //prints value, then adds one, order is important in AP
    if ( indexWhile < 10000 ) {
    //Checking Image Size
@@ -93,10 +115,10 @@ if ( imageHeightAdjusted1 > imageDivHeight ) {
    //ERROR: Infinite Loop
    println("ERROR: infinite loop, Image Pixel WHILE, value:", indexWhile);
    //exit(); //doesn't work, must force WHILE Stop
-   imageHeightAdjusted1=imageDivHeight;
+   imageHeightAdjusted[i]=imageDivHeight;
    }
-   imageHeightAdjusted1++;
-   println("Inspection of Pixel decrease:", imageWidthAdjusted1, imageHeightAdjusted1, imageDivHeight);
+   imageHeightAdjusted[i]++;
+   println("Inspection of Pixel decrease:", imageWidthAdjusted[i], imageHeightAdjusted[i], imageDivHeight);
    } //End WHILE Error Check, Counting Up
    */
   //
@@ -106,6 +128,6 @@ if ( imageHeightAdjusted1 > imageDivHeight ) {
 rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 //
 //image( image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight );
-image( image1, imageDivX, imageDivY, imageWidthAdjusted1, imageHeightAdjusted1 );
+image( image[i], imageDivX, imageDivY, imageWidthAdjusted[i], imageHeightAdjusted[i] );
 //
 //End Program
