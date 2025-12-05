@@ -15,4 +15,7 @@ float stringDivY = appHeight*1/10;
 float stringDivWidth = appWidth*1/2;
 float stringDivHeight = appHeight*1/10; // ** Make smaller to test height
 //
+//Note: DIV to "see" variables
 rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
+//
+text();
