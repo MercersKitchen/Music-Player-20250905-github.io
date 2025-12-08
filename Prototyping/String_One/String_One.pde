@@ -28,10 +28,11 @@ String title = "Wahoo!";
  String[] fontList = PFont.list(); //To list all fonts available on system
  printArray(fontList); //For listing all possible fonts to choose, then createFont
  */
-int fontSize = 55; //Entire Program
+int fontSize = 15; //Entire Program
 PFont titleFont; //Font Var name
-String harrington = "Harrington";
+String harrington = "Harrington"; //Spelling of the Font Matters, se above
 titleFont = createFont (harrington, fontSize);
+fill(0);
 //Note: DIV to "see" variables
 rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 //
