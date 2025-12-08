@@ -1,5 +1,5 @@
 /* String
-*/
+ */
 //
 //Display
 fullScreen(); //Landscape
@@ -22,11 +22,16 @@ String title = "Wahoo!";
  - Fonts differs in WHITE SPACE around the foreground "coloured ink"
  */
 // Students enter all text from Case Study
-println("Start of Console"); //ERROR: in case CONSOLE Memory not enough
-//Fonts from OS
-String[] fontList = PFont.list(); //To list all fonts available on system
+
+/*Fonts from OS
+ println("Start of Console"); //ERROR: in case CONSOLE Memory not enough
+ String[] fontList = PFont.list(); //To list all fonts available on system
  printArray(fontList); //For listing all possible fonts to choose, then createFont
-//
+ */
+int fontSize = 55; //Entire Program
+PFont titleFont; //Font Var name
+String harrington = "Harrington";
+titleFont = createFont (harrington, fontSize);
 //Note: DIV to "see" variables
 rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 //
