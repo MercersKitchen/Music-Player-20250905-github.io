@@ -27,12 +27,13 @@ String title = "Wahoo!";
  println("Start of Console"); //ERROR: in case CONSOLE Memory not enough
  String[] fontList = PFont.list(); //To list all fonts available on system
  printArray(fontList); //For listing all possible fonts to choose, then createFont
+ //Spelling Counts and must compare CONSOLE v Tools / Create Font / Create Font Spelling
+ //Tools / Create Font / Find Font / Do Not Press "OK", known conflict between loadFont() and createFont()
  */
-float fontSize = 40.0; //Entire Program
-PFont titleFont; //Font Var name
-String harrington = "Harrington"; //Spelling of the Font Matters, se above
+float fontSize = 40.0; //Entire Program, Algorithm to have smallest font size, then 
+PFont titleFont; //Font Varaible Name, able to have more than one Font
+String harrington = "Harrington"; //Spelling of the Font Matters, see PFont.list() v Create Font above
 titleFont = createFont(harrington, fontSize);
-//Tools / Create Font / Find Font / Do Not Press "OK", known conflict between loadFont() and createFont()
 //
 println(fontSize, harrington, titleFont);
 //
