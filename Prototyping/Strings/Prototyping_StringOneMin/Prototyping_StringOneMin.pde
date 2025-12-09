@@ -18,10 +18,18 @@ String title = "Wahoo!"; //"Wahoo! I changed 2D Size."
  //Spelling Counts and must compare CONSOLE v Tools / Create Font / Create Font Spelling
  //Tools / Create Font / Find Font / Do Not Press "OK", known conflict between loadFont() and createFont()
  */
-float fontSize = 116.0;
+float fontSize = appHeight;
 PFont titleFont;
 String harrington = "Harrington";
 titleFont = createFont(harrington, fontSize);
+//
+println(fontSize, harrington, titleFont);
+float fontSizeHarrington = 83.0;
+println("Font Size:", fontSize );
+float harringtonAspectRatio = fontSizeHarrington / stringDivHeight;
+fontSize = stringDivHeight*harringtonAspectRatio;
+println("Harrington Aspect Ratio:", harringtonAspectRatio);
+println(); //Skip a line
 //
 rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 //
