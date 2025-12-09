@@ -32,7 +32,7 @@ String title = "Wahoo!";
  */
 //Teacher ONLY: Starts as an int but converted to a float later
 //Note: pass appHeight into fontSize and resize
-//CUATION: strange things happen with font sizes, must have WHILE Check and Percentage Decrease Check
+//CUATION: strange things happen with font sizes, should have WHILE Check and Percentage Decrease Check
 float fontSize = 116.0; //Entire Program, Algorithm to have smallest font size
 PFont titleFont; //Font Varaible Name, able to have more than one Font
 String harrington = "Harrington"; //Spelling of the Font Matters, see PFont.list() v Create Font above
