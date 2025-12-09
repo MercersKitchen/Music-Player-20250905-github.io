@@ -16,8 +16,8 @@ float stringDivWidth = appWidth*1/2;
 float stringDivHeight = appHeight*1/10; // ** Make smaller to test height
 //
 //Strings, Text, Literal
-String title = "Wahoo!";
-/* Full String longer than Rectangle,  "Wahoo! I changed 2D Size."
+String title = "Wahoo! I changed 2-dimension Size.";
+/* Full String longer than Rectangle, "Wahoo!"
  - When a String just fits the height aspect ratio is the largest, sometimes >1
  - Fonts differs in WHITE SPACE around the foreground "coloured ink"
  */
