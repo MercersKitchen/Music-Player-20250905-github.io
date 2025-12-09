@@ -41,13 +41,15 @@ String harrington = "Harrington"; //Spelling of the Font Matters, see PFont.list
 titleFont = createFont(harrington, fontSize);
 //
 println(fontSize, harrington, titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
-fontSize = 83.0; //Change the number until it fits, largest font size
+float fontSizeHarrington = 83.0; //Change the number until it fits, largest font size
+//Hardcoded fontSizeHarrington
 println("Font Size:", fontSize );
 /* Aspect Ratio Manipulations (changes to variables)
  - choose Aspect Ratio that must be mutliplied: fontSize/titleHeight
  - Rewriting fontSize with formulae
  */
-float harringtonAspectRatio = fontSize / stringDivHeight;
+float harringtonAspectRatio = fontSizeHarrington / stringDivHeight;
+fontSize = stringDivHeight*harringtonAspectRatio;
 println("Harrington Aspect Ratio:", harringtonAspectRatio);
 println(); //Skip a line
 //
