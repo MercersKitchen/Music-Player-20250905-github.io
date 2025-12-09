@@ -61,11 +61,11 @@ rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 
 //Aspect Ratio Calculation
 color purpleInk = #2C08FF; //AP MiniLesson on bit, 8-bit or byte (grey scale, 256), colour
-color whiteInk = #FFFFFF; //Grey Scale is 0
+color whiteInk = #FFFFFF; //Grey Scale is 255
 color resetInk = whiteInk;
 fill(purpleInk); //Ink, hexidecimal copied from Color Selector
 //Grey Scale 0-255
-//textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
+textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
 //
 textFont(titleFont, fontSize); //see variable note
