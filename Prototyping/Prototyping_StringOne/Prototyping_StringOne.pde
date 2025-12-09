@@ -30,15 +30,31 @@ String title = "Wahoo!";
  //Spelling Counts and must compare CONSOLE v Tools / Create Font / Create Font Spelling
  //Tools / Create Font / Find Font / Do Not Press "OK", known conflict between loadFont() and createFont()
  */
-float fontSize = 40.0; //Entire Program, Algorithm to have smallest font size, then 
+//Note: pass displayHeight or height into fontSize and resize
+//Teacher ONLY: Starts as an int but converted to a float later
+float fontSize = 116.00; //Entire Program, Algorithm to have smallest font size, then
 PFont titleFont; //Font Varaible Name, able to have more than one Font
 String harrington = "Harrington"; //Spelling of the Font Matters, see PFont.list() v Create Font above
+//Reminder: only letters ending with numbers, underscore means camelCase or snake_case
+//Mispelling will cuase a very odd error
 titleFont = createFont(harrington, fontSize);
 //
-println(fontSize, harrington, titleFont);
+println(fontSize, harrington, titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
 //
 //Note: DIV to "see" variables
 rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 //
-fill(0);
+//Minimum Lines of code to format, draw text with colour, and become aware of other functions
+//Must be before text()
+color purpleInk = #2C08FF; //AP MiniLesson on bit, 8-bit or byte (grey scale, 256), colour
+fill(purpleInk); //Ink, hexidecimal copied from Color Selector
+//Grey Scale 0-255
+//textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
+//Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
+textFont(titleFont, fontSize); //see variable note
+//textFont() has option to combine font declaration with textSize()
+//textFont() is better for more than one PFont Variable
+//
 text( title, stringDivX, stringDivY, stringDivWidth, stringDivHeight );
+//
+//End Program
