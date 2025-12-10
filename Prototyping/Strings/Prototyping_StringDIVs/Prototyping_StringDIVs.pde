@@ -66,8 +66,8 @@ rect( stringDivX3, stringDivY3, stringDivWidth3, stringDivHeight3 );
 //Must be before text()
 
 //Aspect Ratio Calculation
-float harringtonAspectRatio = fontSizeHarrington / stringDivHeight;
-fontSize = stringDivHeight*harringtonAspectRatio;
+float harringtonAspectRatio = fontSizeHarrington / stringDivHeight1;
+fontSize = stringDivHeight1*harringtonAspectRatio;
 println("Harrington Aspect Ratio:", harringtonAspectRatio);
 println(); //Skip a line
 //
@@ -82,17 +82,23 @@ textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
 //ERROR Check fontSize, decreasing the text when wrapped or not shown
 textFont(titleFont, fontSize); //see variable note
 float constantDecrease = 0.99;  //99% of origonal or 1% decrease
-while ( textWidth( title ) > stringDivWidth ) {
-  //ERROR: infinite loop, requires exit() & println()
-  fontSize *= constantDecrease; //Assignment Operator  //fontSize = fontSize*0.99;
-  textFont(titleFont, fontSize); //see variable note
-} //End WHILE Error Check Text-wrap
+//FOR Loop Error, Copy * Paste three times
+for ( i=1; i<=3, i++ ) {
+  while ( textWidth( title ) > stringDivWidth[i] ) {
+    //ERROR: infinite loop, requires exit() & println()
+    fontSize *= constantDecrease; //Assignment Operator  //fontSize = fontSize*0.99;
+    textFont(titleFont, fontSize); //see variable note
+  } //End WHILE Error Check Text-wrap
+} //End FOR Loop, Font Size Check in DIVs
+
 
 //WHILE Error Check
 //textFont() has option to combine font declaration with textSize()
 //textFont() is better for more than one PFont Variable
 //
-text( title, stringDivX, stringDivY, stringDivWidth, stringDivHeight );
+text( title, stringDivX1, stringDivY1, stringDivWidth1, stringDivHeight1 );
+text( title, stringDivX2, stringDivY2, stringDivWidth2, stringDivHeight2 );
+text( title, stringDivX3, stringDivY3, stringDivWidth3, stringDivHeight3 );
 fill(resetInk);
 //
 //End Program
