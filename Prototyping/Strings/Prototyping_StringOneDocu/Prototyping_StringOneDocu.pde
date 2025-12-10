@@ -70,7 +70,8 @@ textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
 //
 //Drawing Text
 //ERROR Check fontSize, decreasing the text when wrapped or not shown
-float constrantDecrease = 0.99;  //99% of origonal or 1% decrease (larger #'s have  bigger decrease)
+float constrantDecrease = 0.99;  //99% of origonal or 1% decrease
+while () {} //End WHILE Error Check Text-wrap
 textFont(titleFont, fontSize); //see variable note
 //WHILE Error Check
 //textFont() has option to combine font declaration with textSize()
