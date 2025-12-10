@@ -68,6 +68,9 @@ fill(purpleInk); //Ink, hexidecimal copied from Color Selector
 textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
 //
+//Drawing Text
+//ERROR Check fontSize, decreasing the text when wrapped or not shown
+https://www.youtube.com/watch?v=JMjozqJS44M
 textFont(titleFont, fontSize); //see variable note
 //WHILE Error Check
 //textFont() has option to combine font declaration with textSize()
