@@ -31,7 +31,7 @@ String title = "Wahoo! I changed 2-dimension Size."; //2D
  //Tools / Create Font / Find Font / Do Not Press "OK", known conflict between loadFont() and createFont()
  */
 //Teacher ONLY: Starts as an int but converted to a float later
-//Note: pass appHeight into fontSize and resize
+//Note: pass appHeight into fontSize and resize, passing a smallest number does not make this error
 //CAUTION: strange things happen with font sizes, should have WHILE Check and Percentage Decrease Check
 float fontSize = appHeight; //Entire Program, Algorithm to have smallest font size
 PFont titleFont; //Font Varaible Name, able to have more than one Font
