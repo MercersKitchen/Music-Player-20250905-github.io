@@ -73,8 +73,8 @@ textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
 //ERROR Check fontSize, decreasing the text when wrapped or not shown
 textFont(titleFont, fontSize); //see variable note
 float constrantDecrease = 0.99;  //99% of origonal or 1% decrease
-while () {
-  //
+while ( textWidth( title ) > stringDivWidth ) {
+  //ERROR: infinite loop, requires exit() & println()
   textFont(titleFont, fontSize); //see variable note
 } //End WHILE Error Check Text-wrap
 
