@@ -22,7 +22,7 @@ String title = "Wahoo! I changed 2-dimension Size."; //2D
  - Fonts differs in WHITE SPACE around the foreground "coloured ink"
  */
 // Students enter all text from Case Study
-
+//
 /*Fonts from OS
  println("Start of Console"); //ERROR: in case CONSOLE Memory not enough
  String[] fontList = PFont.list(); //To list all fonts available on system
@@ -48,10 +48,6 @@ println("Font Size:", fontSize );
  - choose Aspect Ratio that must be mutliplied: fontSize/titleHeight
  - Rewriting fontSize with formulae
  */
-float harringtonAspectRatio = fontSizeHarrington / stringDivHeight;
-fontSize = stringDivHeight*harringtonAspectRatio;
-println("Harrington Aspect Ratio:", harringtonAspectRatio);
-println(); //Skip a line
 //
 //Note: DIV to "see" variables
 rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
@@ -60,7 +56,10 @@ rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 //Must be before text()
 
 //Aspect Ratio Calculation
-
+float harringtonAspectRatio = fontSizeHarrington / stringDivHeight;
+fontSize = stringDivHeight*harringtonAspectRatio;
+println("Harrington Aspect Ratio:", harringtonAspectRatio);
+println(); //Skip a line
 //
 //Drawing Text
 color purpleInk = #2C08FF; //AP MiniLesson on bit, 8-bit or byte (grey scale, 256), colour
