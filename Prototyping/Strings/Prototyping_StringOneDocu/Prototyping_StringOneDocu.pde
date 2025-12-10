@@ -60,6 +60,9 @@ rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 //Must be before text()
 
 //Aspect Ratio Calculation
+
+//
+//Drawing Text
 color purpleInk = #2C08FF; //AP MiniLesson on bit, 8-bit or byte (grey scale, 256), colour
 color whiteInk = #FFFFFF; //Grey Scale is 255
 color resetInk = whiteInk;
@@ -67,12 +70,14 @@ fill(purpleInk); //Ink, hexidecimal copied from Color Selector
 //Grey Scale 0-255
 textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
-//
-//Drawing Text
 //ERROR Check fontSize, decreasing the text when wrapped or not shown
-float constrantDecrease = 0.99;  //99% of origonal or 1% decrease
-while () {} //End WHILE Error Check Text-wrap
 textFont(titleFont, fontSize); //see variable note
+float constrantDecrease = 0.99;  //99% of origonal or 1% decrease
+while () {
+  //
+  textFont(titleFont, fontSize); //see variable note
+} //End WHILE Error Check Text-wrap
+
 //WHILE Error Check
 //textFont() has option to combine font declaration with textSize()
 //textFont() is better for more than one PFont Variable
