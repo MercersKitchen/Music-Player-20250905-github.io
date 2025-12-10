@@ -10,10 +10,18 @@ int appHeight = displayHeight; //height
 //println("\t\t\t\tFullScreen, displayWidth:\t"+displayWidth, "\tdisplayHeight:\t"+displayHeight, "\n\t\t\t\tSize\t, width:\t\t"+width, "\theight:\t\t"+height);
 //
 //Population
-float stringDivX = appWidth*1/4; //**Akward DIV
-float stringDivY = appHeight*1/10;
-float stringDivWidth = appWidth*1/2;
-float stringDivHeight = appHeight*1/10; // ** Make smaller to test height
+float stringDivX1 = appWidth*1/4; //**Akward DIV
+float stringDivY1 = appHeight*1/10;
+float stringDivWidth1 = appWidth*1/2;
+float stringDivHeight1 = appHeight*1/10; // ** Make smaller to test height
+float stringDivX2 = stringDivX1; //Cascading VARs
+float stringDivY2 = appHeight*3/10;
+float stringDivWidth2 = appWidth*1/4;
+float stringDivHeight2 = stringDivHeight1; //Cascading VARs
+float stringDivX3 = stringDivX1; //Cascading VARs, best practice
+float stringDivY3 = appHeight*5/10;
+float stringDivWidth3 = appWidth*5/8;
+float stringDivHeight3 = stringDivHeight1; //Cascading VARs, best practice
 //
 //Strings, Text, Literal
 String title = "Wahoo! I changed 2-dimension Size."; //2D
