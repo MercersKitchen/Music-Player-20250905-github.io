@@ -10,17 +10,22 @@ int appHeight = displayHeight; //height
 //println("\t\t\t\tFullScreen, displayWidth:\t"+displayWidth, "\tdisplayHeight:\t"+displayHeight, "\n\t\t\t\tSize\t, width:\t\t"+width, "\theight:\t\t"+height);
 //
 //Population
+float stringDivX1
+float stringDivY1
+float[] stringDivWidth = new float[3];
+float stringDivHeight1
+
 float stringDivX1 = appWidth*1/4; //**Akward DIV
 float stringDivY1 = appHeight*1/10;
-float stringDivWidth1 = appWidth*1/2;
+stringDivWidth[1] = appWidth*1/2;
 float stringDivHeight1 = appHeight*1/10; // ** Make smaller to test height
 float stringDivX2 = stringDivX1; //Cascading VARs
 float stringDivY2 = appHeight*3/10;
-float stringDivWidth2 = appWidth*1/4;
+stringDivWidth[2] = appWidth*1/4;
 float stringDivHeight2 = stringDivHeight1; //Cascading VARs
 float stringDivX3 = stringDivX1; //Cascading VARs, best practice
 float stringDivY3 = appHeight*5/10;
-float stringDivWidth3 = appWidth*5/8;
+stringDivWidth[3] = appWidth*5/8;
 float stringDivHeight3 = stringDivHeight1; //Cascading VARs, best practice
 //
 //Strings, Text, Literal
@@ -83,7 +88,7 @@ textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
 textFont(titleFont, fontSize); //see variable note
 float constantDecrease = 0.99;  //99% of origonal or 1% decrease
 //FOR Loop Error, Copy * Paste three times
-for ( i=1; i<=3, i++ ) {
+for ( int i=0; i<3; i++ ) {
   while ( textWidth( title ) > stringDivWidth[i] ) {
     //ERROR: infinite loop, requires exit() & println()
     fontSize *= constantDecrease; //Assignment Operator  //fontSize = fontSize*0.99;
@@ -96,9 +101,9 @@ for ( i=1; i<=3, i++ ) {
 //textFont() has option to combine font declaration with textSize()
 //textFont() is better for more than one PFont Variable
 //
-text( title, stringDivX1, stringDivY1, stringDivWidth1, stringDivHeight1 );
-text( title, stringDivX2, stringDivY2, stringDivWidth2, stringDivHeight2 );
-text( title, stringDivX3, stringDivY3, stringDivWidth3, stringDivHeight3 );
+for ( int i=o; i<3; i++) {
+  text( title, stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
+}
 fill(resetInk);
 //
 //End Program
