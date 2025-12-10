@@ -50,7 +50,9 @@ println("Font Size:", fontSize );
  */
 //
 //Note: DIV to "see" variables
-rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
+rect( stringDivX1, stringDivY1, stringDivWidth1, stringDivHeight1 );
+rect( stringDivX2, stringDivY2, stringDivWidth2, stringDivHeight2 );
+rect( stringDivX3, stringDivY3, stringDivWidth3, stringDivHeight3 );
 //
 //Minimum Lines of code to format, draw text with colour, and become aware of other functions
 //Must be before text()
