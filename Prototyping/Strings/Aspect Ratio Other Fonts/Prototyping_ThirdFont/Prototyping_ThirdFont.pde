@@ -39,11 +39,11 @@ String title = "Wahoo!"; //Smaller than divWidth
 //CAUTION: strange things happen with font sizes, should have WHILE Check and Percentage Decrease Check
 float fontSize = appHeight; //Entire Program, Algorithm to have smallest font size
 PFont titleFont; //Font Varaible Name, able to have more than one Font
-String arial = "Arial Italic"; //Spelling of the Font Matters, see PFont.list() v Create Font above
-//Arial is default when fonts do not work, using italics here to demonstrate difference
+String bauhaus = "Bauhaus 93"; //Spelling of the Font Matters, see PFont.list() v Create Font above
+//Bauhaus 93 demosntrates difference of spelling from CONSOLE PFont.list() and Tools/CreateFont
 //Reminder: only letters ending with numbers, underscore means camelCase or snake_case
 //Mispelling will cuase a very odd error
-titleFont = createFont(arial, fontSize);
+titleFont = createFont(bauhaus, fontSize);
 //
 //println("Font Size:", fontSize, "\tFont Spelling:", arial, "\tFont Variable Confirmation:", titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
 //
@@ -52,11 +52,11 @@ titleFont = createFont(arial, fontSize);
  - Rewriting fontSize with formulae
  */
 //** Aspect Ratio records manual changes of declaration-initiation
-float fontSizeArial = 87.0; //fontSize=131 when not initiating with appHeight first
-float divHeightArial = stringDivHeight;
-float arialAspectRatio = fontSizeArial / divHeightArial;
-fontSize = stringDivHeight*arialAspectRatio; //when testing, use fontSizeHarrington, then calculation
-//println("Arial Italics Aspect Ratio:", arialAspectRatio, "@ Font Size:", fontSize);
+float fontSizeBauhaus = 89.0; //fontSize=141 when not initiating with appHeight first
+float divHeightBauhaus = stringDivHeight;
+float bauhausAspectRatio = fontSizeBauhaus / divHeightBauhaus;
+fontSize = stringDivHeight*bauhausAspectRatio; //when testing, use fontSizeHarrington, then calculation
+//println("Bauhaus Italics Aspect Ratio:", bauhausAspectRatio, "@ Font Size:", fontSize);
 //
 rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight ); //We see shape, computer sees variables
 //
