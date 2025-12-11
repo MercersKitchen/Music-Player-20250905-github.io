@@ -61,7 +61,7 @@ titleFont = createFont(harrington, fontSize);
  - Use only one DIV
  - Apply to other DIVs
  */
-println(fontSize, harrington, titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
+println("Font Size:", fontSize, "Font Spelling:", harrington, "Font Varaiable Confirmation:", titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
 float fontSizeHarrington = 83.0; //Change the number until it fits, largest font size
 float divHeightHarrington = stringDivHeight[0];
 //Hardcoded fontSizeHarrington
