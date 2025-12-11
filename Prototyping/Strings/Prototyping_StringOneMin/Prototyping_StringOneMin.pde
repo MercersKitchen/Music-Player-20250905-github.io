@@ -23,13 +23,9 @@ PFont titleFont;
 String harrington = "Harrington";
 titleFont = createFont(harrington, fontSize);
 //
-println(fontSize, harrington, titleFont);
 float fontSizeHarrington = 83.0;
-println("Font Size:", fontSize );
 float harringtonAspectRatio = fontSizeHarrington / stringDivHeight;
 fontSize = stringDivHeight*harringtonAspectRatio;
-println("Harrington Aspect Ratio:", harringtonAspectRatio);
-println(); //Skip a line
 //
 rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 //
@@ -39,9 +35,7 @@ color resetInk = whiteInk;
 fill(purpleInk); //Ink, hexidecimal copied from Color Selector
 textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
-//
 textFont(titleFont, fontSize); //see variable note
-//
 text( title, stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 fill(resetInk);
 //
