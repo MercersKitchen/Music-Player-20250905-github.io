@@ -60,7 +60,7 @@ titleFont = createFont(harrington, fontSize);
  - Use only one DIV
  - Apply to other DIVs
  */
-println("Font Size:", fontSize, "Font Spelling:", harrington, "Font Varaiable Confirmation:", titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
+println("Font Size:", fontSize, "\tFont Spelling:", harrington, "\tFont Varaiable Confirmation:", titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
 float fontSizeHarrington = 83.0; //Change the number until it fits, largest font size
 float divHeightHarrington = stringDivHeight[0];
 //Hardcoded fontSizeHarrington
@@ -71,14 +71,21 @@ println("Font Size:", fontSize );
  */
 //
 //Note: DIV to "see" variables
-for ( int i = 0; i<numberOfDIVs; i++) {
+for ( int i=0; i<numberOfDIVs; i++ ) {
   rect( stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
 } //End FOR DIVs
 //
 //Aspect Ratio Calculation
-float harringtonAspectRatio = fontSizeHarrington / stringDivHeight1;
-fontSize = stringDivHeight1*harringtonAspectRatio;
-println("Harrington Aspect Ratio:", harringtonAspectRatio);
+float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington;
+//Finding the smallest fontSize in the smallest DIV
+fontSize = stringDivHeight[0]*harringtonAspectRatio;
+/*
+for (int i=0; i<numberOfDIVs; i++) {
+  float fontSizeTemp = stringDivHeight[i]*harringtonAspectRatio; //Local Variable holding temporary calcuation compared to current, overwirtten each time
+  if ( fontSize>fontSizeTemp) fontSize = fontSizeTemp;
+} //End fontSize FOR
+*/
+println("Harrington Aspect Ratio:", harringtonAspectRatio, "\tFont Size:", fontSize);
 println(); //Skip a line
 //
 //Drawing Text
@@ -102,13 +109,11 @@ for ( int i=0; i<3; i++ ) {
     textFont(titleFont, fontSize); //see variable note
   } //End WHILE Error Check Text-wrap
 } //End FOR Loop, Font Size Check in DIVs
-
-
 //WHILE Error Check
 //textFont() has option to combine font declaration with textSize()
 //textFont() is better for more than one PFont Variable
 //
-for ( int i=o; i<3; i++) {
+for ( int i=0; i<numberOfDIVs; i++ ) {
   text( title, stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
 }
 fill(resetInk);
