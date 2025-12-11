@@ -61,10 +61,10 @@ titleFont = createFont(harrington, fontSize);
  - Use only one DIV
  - Apply to other DIVs
  */
-println("Font Size:", fontSize, "\tFont Spelling:", harrington, "\tFont Varaiable Confirmation:", titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
+//println("Font Size:", fontSize, "\tFont Spelling:", harrington, "\tFont Varaiable Confirmation:", titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
 float fontSizeHarrington = 83.0; //Change the number until it fits, largest font size
 float divHeightHarrington = stringDivHeight[0];
-println("Font Size:", fontSize );
+//println("Font Size:", fontSize );
 /* Aspect Ratio Manipulations (changes to variables)
  - choose Aspect Ratio that must be mutliplied: fontSize/titleHeight
  - Rewriting fontSize with formulae
@@ -79,8 +79,8 @@ for ( int i=0; i<numberOfDIVs; i++ ) {
 float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington;
 //Finding the smallest fontSize in the smallest DIV
 fontSize = stringDivHeight[0]*harringtonAspectRatio; // Font fits in first DIV only
-println("Harrington Aspect Ratio:", harringtonAspectRatio, "\tFont Size:", fontSize);
-println(); //Skip a line
+//println("Harrington Aspect Ratio:", harringtonAspectRatio, "\tFont Size:", fontSize);
+//println(); //Skip a line
 //
 //Drawing Text
 //Minimum Lines of code to format, draw text with colour, and become aware of other functions
@@ -104,7 +104,7 @@ for ( int i=0; i<3; i++ ) {
     fontSize *= constantDecrease; //Assignment Operator  //fontSize = fontSize*0.99;
     textFont(titleFont, fontSize); //see variable note
   } //End WHILE Error Check Text-wrap
-  println("Iterations of WHILE:", iWhile, "\tDifference of divWidth & textWidth:", stringDivWidth[i]-textWidth( title ), "\tUsing", constantDecrease*100+"%" ); //Plus sign is concatenation for % symbol, exemplar
+  //println("Iterations of WHILE:", iWhile, "\tDifference of divWidth & textWidth:", stringDivWidth[i]-textWidth( title ), "\tUsing", constantDecrease*100+"%" ); //Plus sign is concatenation for % symbol, exemplar
 } //End FOR Loop, Font Size Check in DIVs
 //WHILE Error Check
 //textFont() has option to combine font declaration with textSize()
