@@ -71,20 +71,7 @@ fill(purpleInk); //Ink, hexidecimal copied from Color Selector
 textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
 //
-//WHILE ERROR Check fontSize, decreasing the text when wrapped or not shown
-//textFont() has option to combine font declaration with textSize()
-//textFont() is better for more than one PFont Variable
 textFont(titleFont, fontSize); //must include textSize() before text() & textWidth()
-float constantDecrease = 0.99;  //99% of origonal or 1% decrease, change to optimize and count up with pixels
-int iWhile=0; //Counting iterations of WHILE, adjust with optimization and pixel decrease adjustment algorithm
-while ( textWidth( title ) > stringDivWidth ) {
-  iWhile++;
-  //ERROR: infinite loop, requires exit() & println()
-  fontSize *= constantDecrease; //Assignment Operator  //fontSize = fontSize*0.99;
-  textFont(titleFont, fontSize); //see variable note
-} //End WHILE Error Check Text-wrap
-//println("Iterations of WHILE:", iWhile, "\tDifference of divWidth & textWidth:", stringDivWidth-textWidth( title ), "\tUsing", constantDecrease*100+"%" );
-//
 text( title, stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 fill(resetInk);
 //
