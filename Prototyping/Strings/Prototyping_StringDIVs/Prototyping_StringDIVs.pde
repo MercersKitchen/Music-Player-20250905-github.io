@@ -64,7 +64,6 @@ titleFont = createFont(harrington, fontSize);
 println("Font Size:", fontSize, "\tFont Spelling:", harrington, "\tFont Varaiable Confirmation:", titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
 float fontSizeHarrington = 83.0; //Change the number until it fits, largest font size
 float divHeightHarrington = stringDivHeight[0];
-//Hardcoded fontSizeHarrington
 println("Font Size:", fontSize );
 /* Aspect Ratio Manipulations (changes to variables)
  - choose Aspect Ratio that must be mutliplied: fontSize/titleHeight
@@ -80,12 +79,12 @@ for ( int i=0; i<numberOfDIVs; i++ ) {
 float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington;
 //Finding the smallest fontSize in the smallest DIV
 fontSize = stringDivHeight[0]*harringtonAspectRatio;
-/*
+
 for (int i=0; i<numberOfDIVs; i++) {
  float fontSizeTemp = stringDivHeight[i]*harringtonAspectRatio; //Local Variable holding temporary calcuation compared to current, overwirtten each time
  if ( fontSize>fontSizeTemp) fontSize = fontSizeTemp;
  } //End fontSize FOR
- */
+
 println("Harrington Aspect Ratio:", harringtonAspectRatio, "\tFont Size:", fontSize);
 println(); //Skip a line
 //
@@ -103,12 +102,15 @@ textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
 textFont(titleFont, fontSize); //see variable note
 float constantDecrease = 0.99;  //99% of origonal or 1% decrease
 //FOR Loop Error, Copy * Paste three times
+int iWhile=0; //Counting iterations of WHILE, adjust with optimization and pixel decrease adjustment algorithm
 for ( int i=0; i<3; i++ ) {
   while ( textWidth( title ) > stringDivWidth[i] ) {
+    iWhile++;
     //ERROR: infinite loop, requires exit() & println()
     fontSize *= constantDecrease; //Assignment Operator  //fontSize = fontSize*0.99;
     textFont(titleFont, fontSize); //see variable note
   } //End WHILE Error Check Text-wrap
+  println("Iterations of WHILE:", iWhile, "\tDifference of divWidth & textWidth:", stringDivWidth[i]-textWidth( title ), "\tUsing", constantDecrease*100+"%" ); //Plus sign is concatenation for % symbol, exemplar
 } //End FOR Loop, Font Size Check in DIVs
 //WHILE Error Check
 //textFont() has option to combine font declaration with textSize()
