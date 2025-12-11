@@ -63,6 +63,7 @@ titleFont = createFont(harrington, fontSize);
  */
 println(fontSize, harrington, titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
 float fontSizeHarrington = 83.0; //Change the number until it fits, largest font size
+float divHeightHarrington = stringDivHeight[0];
 //Hardcoded fontSizeHarrington
 println("Font Size:", fontSize );
 /* Aspect Ratio Manipulations (changes to variables)
