@@ -44,7 +44,8 @@ titleFont = createFont(harrington, fontSize);
  - Use only one DIV
  - Apply to other DIVs
  */
-println("Font Size:", fontSize, "Font Spelling:", harrington, "Font Varaiable Confirmation:", titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
+//println("Font Size:", fontSize, "\tFont Spelling:", harrington, "\tFont Variable Confirmation:", titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
+//println(); //Skip a Line
 float fontSizeHarrington = 83.0; //Change the number until it fits, largest font size
 float divHeightHarrington = stringDivHeight;
 //Hardcoded fontSizeHarrington
@@ -59,8 +60,8 @@ rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
  */
 float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington;
 fontSize = stringDivHeight*harringtonAspectRatio;
-println("Harrington Aspect Ratio:", harringtonAspectRatio);
-println(); //Skip a line
+//println("Harrington Aspect Ratio:", harringtonAspectRatio);
+//println(); //Skip a line
 //
 //Drawing Text
 //Minimum Lines of code to format, draw text with colour, and become aware of other functions
@@ -74,13 +75,15 @@ textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
 //ERROR Check fontSize, decreasing the text when wrapped or not shown
 textFont(titleFont, fontSize); //see variable note
-float constantDecrease = 0.99;  //99% of origonal or 1% decrease
+float constantDecrease = 0.99;  //99% of origonal or 1% decrease, change to optimize and count up with pixels
+int iWhile=0; //Counting iterations of WHILE, adjust with optimization and pixel decrease adjustment algorithm
 while ( textWidth( title ) > stringDivWidth ) {
+  iWhile++;
   //ERROR: infinite loop, requires exit() & println()
   fontSize *= constantDecrease; //Assignment Operator  //fontSize = fontSize*0.99;
   textFont(titleFont, fontSize); //see variable note
 } //End WHILE Error Check Text-wrap
-
+//println("Iterations of WHILE:", iWhile, "\tDifference of divWidth & textWidth:", stringDivWidth-textWidth( title ), "\tUsing", constantDecrease*100+"%" );
 //WHILE Error Check
 //textFont() has option to combine font declaration with textSize()
 //textFont() is better for more than one PFont Variable
@@ -88,4 +91,5 @@ while ( textWidth( title ) > stringDivWidth ) {
 text( title, stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 fill(resetInk);
 //
-//End Program
+//End 
+//End MAIN Program
