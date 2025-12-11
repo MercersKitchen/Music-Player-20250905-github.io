@@ -45,23 +45,21 @@ titleFont = createFont(harrington, fontSize);
  - Apply to other DIVs
  */
 //println("Font Size:", fontSize, "\tFont Spelling:", harrington, "\tFont Variable Confirmation:", titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
-//println(); //Skip a Line
-float fontSizeHarrington = 83.0; //Change the number until it fits, largest font size
-float divHeightHarrington = stringDivHeight;
-//Hardcoded fontSizeHarrington
-//
-//Note: DIV to "see" variables
-rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
-//
-//Aspect Ratio Calculation
-/* Aspect Ratio Manipulations (changes to variables)
+/* Aspect Ratio Calculation
  - choose Aspect Ratio that must be mutliplied (<1): fontSize/titleHeight
  - Rewriting fontSize with formulae
  */
+float fontSizeHarrington = 83.0; //Change the number until it fits, largest font size
+float divHeightHarrington = stringDivHeight;
 float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington;
 fontSize = stringDivHeight*harringtonAspectRatio;
 //println("Harrington Aspect Ratio:", harringtonAspectRatio);
 //println(); //Skip a line
+//
+//Note: DIV to "see" variables
+rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
+//
+
 //
 //Drawing Text
 //Minimum Lines of code to format, draw text with colour, and become aware of other functions

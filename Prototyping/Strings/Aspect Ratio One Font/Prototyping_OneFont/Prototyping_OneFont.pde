@@ -51,7 +51,7 @@ titleFont = createFont(harrington, fontSize);
  - Rewriting fontSize with formulae
  */
 //** Aspect Ratio records manual changes of declaration-initiation
-float fontSizeHarrington = 83.0; //Change the number until it fits, largest font size
+float fontSizeHarrington = 83.0; //fontSize=129 before initializing with appHeight, Change the number until it fits, largest font size
 float divHeightHarrington = stringDivHeight;
 float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington;
 fontSize = stringDivHeight*harringtonAspectRatio; //when testing, use fontSizeHarrington, then calculation
