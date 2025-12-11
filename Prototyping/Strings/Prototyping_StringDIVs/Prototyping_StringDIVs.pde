@@ -1,4 +1,7 @@
-/* String
+/* Strings in Mutliple DIVs
+- create rect() objects, then add FOR Loop demonstrating decreaseing to one line
+- create text() objects, then add FOR Loop, as above
+
  */
 //
 //Display
@@ -10,23 +13,24 @@ int appHeight = displayHeight; //height
 //println("\t\t\t\tFullScreen, displayWidth:\t"+displayWidth, "\tdisplayHeight:\t"+displayHeight, "\n\t\t\t\tSize\t, width:\t\t"+width, "\theight:\t\t"+height);
 //
 //Population
-float stringDivX1
-float stringDivY1
-float[] stringDivWidth = new float[3];
-float stringDivHeight1
+int numberOfDIVs = 3; //Note difference between human and comptuer counting
+float[] stringDivX = new float[numberOfDIVs];
+float[] stringDivY = new float[numberOfDIVs];
+float[] stringDivWidth = new float[numberOfDIVs];
+float[] stringDivHeight = new float[numberOfDIVs];
 
-float stringDivX1 = appWidth*1/4; //**Akward DIV
-float stringDivY1 = appHeight*1/10;
-stringDivWidth[1] = appWidth*1/2;
-float stringDivHeight1 = appHeight*1/10; // ** Make smaller to test height
-float stringDivX2 = stringDivX1; //Cascading VARs
-float stringDivY2 = appHeight*3/10;
-stringDivWidth[2] = appWidth*1/4;
-float stringDivHeight2 = stringDivHeight1; //Cascading VARs
-float stringDivX3 = stringDivX1; //Cascading VARs, best practice
-float stringDivY3 = appHeight*5/10;
-stringDivWidth[3] = appWidth*5/8;
-float stringDivHeight3 = stringDivHeight1; //Cascading VARs, best practice
+stringDivX[0] = appWidth*1/4; //**Akward DIV
+stringDivY[0] = appHeight*1/10;
+stringDivWidth[0] = appWidth*1/2;
+stringDivHeight[0] = appHeight*1/10; // ** Make smaller to test height
+stringDivX[1] = stringDivX[0]; //Cascading VARs
+stringDivY[1] = appHeight*3/10;
+stringDivWidth[1] = appWidth*1/4;
+stringDivHeight[1] = stringDivHeight[0]; //Cascading VARs
+stringDivX[2] = stringDivX[0]; //Cascading VARs, best practice
+stringDivY[2] = appHeight*5/10;
+stringDivWidth[2] = appWidth*5/8;
+stringDivHeight[2] = stringDivHeight[0]; //Cascading VARs, best practice
 //
 //Strings, Text, Literal
 String title = "Wahoo! I changed 2-dimension Size."; //2D
@@ -63,7 +67,7 @@ println("Font Size:", fontSize );
  */
 //
 //Note: DIV to "see" variables
-rect( stringDivX1, stringDivY1, stringDivWidth1, stringDivHeight1 );
+rect( stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
 rect( stringDivX2, stringDivY2, stringDivWidth2, stringDivHeight2 );
 rect( stringDivX3, stringDivY3, stringDivWidth3, stringDivHeight3 );
 //
