@@ -1,4 +1,5 @@
 /* Strings in Mutliple DIVs
+ Purpose: prints smallest DIV font creating constant font size
  - create rect() objects, then add FOR Loop demonstrating decreaseing to one line
  - create text() objects, then add FOR Loop, as above
  - create DIV Arrays based on alphaNumeric of primitive variables
@@ -81,10 +82,10 @@ float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington;
 fontSize = stringDivHeight[0]*harringtonAspectRatio;
 /*
 for (int i=0; i<numberOfDIVs; i++) {
-  float fontSizeTemp = stringDivHeight[i]*harringtonAspectRatio; //Local Variable holding temporary calcuation compared to current, overwirtten each time
-  if ( fontSize>fontSizeTemp) fontSize = fontSizeTemp;
-} //End fontSize FOR
-*/
+ float fontSizeTemp = stringDivHeight[i]*harringtonAspectRatio; //Local Variable holding temporary calcuation compared to current, overwirtten each time
+ if ( fontSize>fontSizeTemp) fontSize = fontSizeTemp;
+ } //End fontSize FOR
+ */
 println("Harrington Aspect Ratio:", harringtonAspectRatio, "\tFont Size:", fontSize);
 println(); //Skip a line
 //
