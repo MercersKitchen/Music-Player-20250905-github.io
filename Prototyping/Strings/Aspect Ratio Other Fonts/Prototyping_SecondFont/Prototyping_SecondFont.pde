@@ -1,5 +1,5 @@
-/* String - Calculating Aspect Ratio for First Font
- Harrington
+/* String - Calculating Arial Aspect Ratio
+ Using Arial Italics since Arial is default when font cannot be found
  */
 //
 //Display

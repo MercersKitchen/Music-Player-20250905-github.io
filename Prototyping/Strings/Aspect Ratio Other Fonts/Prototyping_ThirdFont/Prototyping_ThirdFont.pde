@@ -1,5 +1,4 @@
-/* String - Calculating Aspect Ratio for First Font
- Harrington
+/* String - Calculating Bauhaus Ratio
  */
 //
 //Display

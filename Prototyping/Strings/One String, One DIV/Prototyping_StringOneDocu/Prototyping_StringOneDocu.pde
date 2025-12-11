@@ -1,4 +1,10 @@
-/* String
+/* String - using a font
+ 
+ Text will display if
+ - font size is < divHeight
+ 
+ Text will wrap if textWidth() < divWidth
+ 
  */
 //
 //Display
@@ -6,8 +12,8 @@ fullScreen(); //Landscape
 //size(500, 100); //Portrait, testing smaller DIVs ONLY
 int appWidth = displayWidth; //width
 int appHeight = displayHeight; //height
-//println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight);
-//println("\t\t\t\tFullScreen, displayWidth:\t"+displayWidth, "\tdisplayHeight:\t"+displayHeight, "\n\t\t\t\tSize\t, width:\t\t"+width, "\theight:\t\t"+height);
+//println("CHOICES", "\tFull Screen:", displayWidth, displayHeight, "\tCurrent CANVAS:", width, height); //Comma Concatenation with Character Escape
+//println("\nDisplay VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight); //Comma, Plus Concatenation with Character Escape
 //
 //Population
 float stringDivX = appWidth*1/4; //**Akward DIV
@@ -16,11 +22,7 @@ float stringDivWidth = appWidth*1/2;
 float stringDivHeight = appHeight*1/10; // ** Make smaller to test height
 //
 //Strings, Text, Literal
-String title = "Wahoo! I changed 2-dimension Size."; //2D
-/* Full String longer than Rectangle, "Wahoo!"
- - When a String just fits the height aspect ratio is the largest, sometimes >1
- - Fonts differs in WHITE SPACE around the foreground "coloured ink"
- */
+String title = "Wahoo! I changed 2-dimension Size."; //Full String longer than Rectangle
 // Students enter all text from Case Study
 //
 /*Fonts from OS
@@ -54,12 +56,9 @@ float divHeightHarrington = stringDivHeight;
 float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington;
 fontSize = stringDivHeight*harringtonAspectRatio;
 //println("Harrington Aspect Ratio:", harringtonAspectRatio);
-//println(); //Skip a line
 //
 //Note: DIV to "see" variables
 rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
-//
-
 //
 //Drawing Text
 //Minimum Lines of code to format, draw text with colour, and become aware of other functions
@@ -81,7 +80,7 @@ while ( textWidth( title ) > stringDivWidth ) {
   fontSize *= constantDecrease; //Assignment Operator  //fontSize = fontSize*0.99;
   textFont(titleFont, fontSize); //see variable note
 } //End WHILE Error Check Text-wrap
-//println("Iterations of WHILE:", iWhile, "\tDifference of divWidth & textWidth:", stringDivWidth-textWidth( title ), "\tUsing", constantDecrease*100+"%" );
+println("Iterations of WHILE:", iWhile, "\tDifference of divWidth & textWidth:", stringDivWidth-textWidth( title ), "\tUsing", constantDecrease*100+"%" );
 //WHILE Error Check
 //textFont() has option to combine font declaration with textSize()
 //textFont() is better for more than one PFont Variable
@@ -89,5 +88,5 @@ while ( textWidth( title ) > stringDivWidth ) {
 text( title, stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 fill(resetInk);
 //
-//End 
+//End
 //End MAIN Program
