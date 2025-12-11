@@ -1,7 +1,7 @@
 /* Strings in Mutliple DIVs
  - create rect() objects, then add FOR Loop demonstrating decreaseing to one line
  - create text() objects, then add FOR Loop, as above
- 
+ - create DIV Arrays based on alphaNumeric of primitive variables
  */
 //
 //Display
@@ -18,7 +18,6 @@ float[] stringDivX = new float[numberOfDIVs];
 float[] stringDivY = new float[numberOfDIVs];
 float[] stringDivWidth = new float[numberOfDIVs];
 float[] stringDivHeight = new float[numberOfDIVs];
-
 stringDivX[0] = appWidth*1/4; //**Akward DIV
 stringDivY[0] = appHeight*1/10;
 stringDivWidth[0] = appWidth*1/2;
