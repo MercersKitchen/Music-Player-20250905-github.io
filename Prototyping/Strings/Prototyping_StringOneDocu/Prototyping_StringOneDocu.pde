@@ -48,16 +48,15 @@ println("Font Size:", fontSize, "Font Spelling:", harrington, "Font Varaiable Co
 float fontSizeHarrington = 83.0; //Change the number until it fits, largest font size
 float divHeightHarrington = stringDivHeight;
 //Hardcoded fontSizeHarrington
-println( fontSize );
-/* Aspect Ratio Manipulations (changes to variables)
- - choose Aspect Ratio that must be mutliplied: fontSize/titleHeight
- - Rewriting fontSize with formulae
- */
 //
 //Note: DIV to "see" variables
 rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 //
 //Aspect Ratio Calculation
+/* Aspect Ratio Manipulations (changes to variables)
+ - choose Aspect Ratio that must be mutliplied (<1): fontSize/titleHeight
+ - Rewriting fontSize with formulae
+ */
 float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington;
 fontSize = stringDivHeight*harringtonAspectRatio;
 println("Harrington Aspect Ratio:", harringtonAspectRatio);
