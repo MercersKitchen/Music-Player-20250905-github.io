@@ -1,4 +1,5 @@
-/* String
+/* String - Calculating Aspect Ratio for First Font
+ Harrington
  */
 //
 //Display
@@ -6,8 +7,8 @@ fullScreen(); //Landscape
 //size(500, 100); //Portrait, testing smaller DIVs ONLY
 int appWidth = displayWidth; //width
 int appHeight = displayHeight; //height
-println("CHOICES", "\tFull Screen:", displayWidth, displayHeight, "\tCurrent CANVAS:", width, height);
-println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight);
+//println("CHOICES", "\tFull Screen:", displayWidth, displayHeight, "\tCurrent CANVAS:", width, height); //Comma Concatenation with Character Escape
+//println("\nDisplay VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight); //Comma, Plus Concatenation with Character Escape
 //
 //Population
 float stringDivX = appWidth*1/4; //**Akward DIV
@@ -16,10 +17,13 @@ float stringDivWidth = appWidth*1/2;
 float stringDivHeight = appHeight*1/10; // ** Make smaller to test height
 //
 //Strings, Text, Literal
-String title = "Wahoo! I changed 2-dimension Size."; //2D
-/* Full String longer than Rectangle, "Wahoo!"
- - When a String just fits the height aspect ratio is the largest, sometimes >1
- - Fonts differs in WHITE SPACE around the foreground "coloured ink"
+String title = "Wahoo!"; //Smaller than divWidth
+/* Full String longer than Rectangle, "Wahoo! I changed 2D Size."
+ - divHeight must fit the font size or text is not shown (Advanced, error check includes %-decrease)
+ - Fonts includes the in WHITE SPACE around the foreground "coloured ink"
+ - divWidth must include the font size
+ - if font is too big, wrap around happens
+ - OR full string is not drawn
  */
 // Students enter all text from Case Study
 //
@@ -31,7 +35,7 @@ String title = "Wahoo! I changed 2-dimension Size."; //2D
  //Tools / Create Font / Find Font / Do Not Press "OK", known conflict between loadFont() and createFont()
  */
 //Teacher ONLY: Starts as an int but converted to a float later
-//Note: pass appHeight into fontSize and resize, passing a smallest number does not make this error
+//Note: pass appHeight into fontSize will change how text is drawn, passing a float does not make this error
 //CAUTION: strange things happen with font sizes, should have WHILE Check and Percentage Decrease Check
 float fontSize = appHeight; //Entire Program, Algorithm to have smallest font size
 PFont titleFont; //Font Varaible Name, able to have more than one Font
@@ -40,28 +44,20 @@ String harrington = "Harrington"; //Spelling of the Font Matters, see PFont.list
 //Mispelling will cuase a very odd error
 titleFont = createFont(harrington, fontSize);
 //
-/*Measuring Aspect Ratio for Specific Font
- - Use only one DIV
- - Apply to other DIVs
- */
 //println("Font Size:", fontSize, "\tFont Spelling:", harrington, "\tFont Variable Confirmation:", titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
-//println(); //Skip a Line
-float fontSizeHarrington = 83.0; //Change the number until it fits, largest font size
-float divHeightHarrington = stringDivHeight;
-//Hardcoded fontSizeHarrington
 //
-//Note: DIV to "see" variables
-rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
-//
-//Aspect Ratio Calculation
-/* Aspect Ratio Manipulations (changes to variables)
+/*Aspect Ratio for Harrington
  - choose Aspect Ratio that must be mutliplied (<1): fontSize/titleHeight
  - Rewriting fontSize with formulae
  */
+//** Aspect Ratio records manual changes of declaration-initiation
+float fontSizeHarrington = 83.0; //Change the number until it fits, largest font size
+float divHeightHarrington = stringDivHeight;
 float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington;
-fontSize = stringDivHeight*harringtonAspectRatio;
-//println("Harrington Aspect Ratio:", harringtonAspectRatio);
-//println(); //Skip a line
+fontSize = stringDivHeight*harringtonAspectRatio; //when testing, use fontSizeHarrington, then calculation
+//println("Harrington Aspect Ratio:", harringtonAspectRatio, "@ Font Size:", fontSize);
+//
+rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight ); //We see shape, computer sees variables
 //
 //Drawing Text
 //Minimum Lines of code to format, draw text with colour, and become aware of other functions
@@ -73,8 +69,11 @@ fill(purpleInk); //Ink, hexidecimal copied from Color Selector
 //Grey Scale 0-255
 textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
-//ERROR Check fontSize, decreasing the text when wrapped or not shown
-textFont(titleFont, fontSize); //see variable note
+//
+//WHILE ERROR Check fontSize, decreasing the text when wrapped or not shown
+//textFont() has option to combine font declaration with textSize()
+//textFont() is better for more than one PFont Variable
+textFont(titleFont, fontSize); //must include textSize() before text() & textWidth()
 float constantDecrease = 0.99;  //99% of origonal or 1% decrease, change to optimize and count up with pixels
 int iWhile=0; //Counting iterations of WHILE, adjust with optimization and pixel decrease adjustment algorithm
 while ( textWidth( title ) > stringDivWidth ) {
@@ -83,13 +82,10 @@ while ( textWidth( title ) > stringDivWidth ) {
   fontSize *= constantDecrease; //Assignment Operator  //fontSize = fontSize*0.99;
   textFont(titleFont, fontSize); //see variable note
 } //End WHILE Error Check Text-wrap
-//println("Iterations of WHILE:", iWhile, "\tDifference of divWidth & textWidth:", stringDivWidth-textWidth( title ), "\tUsing", constantDecrease*100+"%" );
-//WHILE Error Check
-//textFont() has option to combine font declaration with textSize()
-//textFont() is better for more than one PFont Variable
+println("Iterations of WHILE:", iWhile, "\tDifference of divWidth & textWidth:", stringDivWidth-textWidth( title ), "\tUsing", constantDecrease*100+"%" );
 //
 text( title, stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 fill(resetInk);
 //
-//End 
+//End
 //End MAIN Program
