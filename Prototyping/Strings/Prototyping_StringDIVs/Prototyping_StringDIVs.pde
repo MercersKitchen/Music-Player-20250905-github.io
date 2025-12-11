@@ -78,13 +78,7 @@ for ( int i=0; i<numberOfDIVs; i++ ) {
 //Aspect Ratio Calculation
 float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington;
 //Finding the smallest fontSize in the smallest DIV
-fontSize = stringDivHeight[0]*harringtonAspectRatio;
-
-for (int i=0; i<numberOfDIVs; i++) {
- float fontSizeTemp = stringDivHeight[i]*harringtonAspectRatio; //Local Variable holding temporary calcuation compared to current, overwirtten each time
- if ( fontSize>fontSizeTemp) fontSize = fontSizeTemp;
- } //End fontSize FOR
-
+fontSize = stringDivHeight[0]*harringtonAspectRatio; // Font fits in first DIV only
 println("Harrington Aspect Ratio:", harringtonAspectRatio, "\tFont Size:", fontSize);
 println(); //Skip a line
 //
