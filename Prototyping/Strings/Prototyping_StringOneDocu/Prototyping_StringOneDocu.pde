@@ -46,6 +46,7 @@ titleFont = createFont(harrington, fontSize);
  */
 println(fontSize, harrington, titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
 float fontSizeHarrington = 83.0; //Change the number until it fits, largest font size
+float divHeightHarrington = stringDivHeight;
 //Hardcoded fontSizeHarrington
 println("Font Size:", fontSize );
 /* Aspect Ratio Manipulations (changes to variables)
@@ -57,7 +58,7 @@ println("Font Size:", fontSize );
 rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 //
 //Aspect Ratio Calculation
-float harringtonAspectRatio = fontSizeHarrington / stringDivHeight;
+float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington;
 fontSize = stringDivHeight*harringtonAspectRatio;
 println("Harrington Aspect Ratio:", harringtonAspectRatio);
 println(); //Skip a line
