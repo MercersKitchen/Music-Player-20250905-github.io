@@ -1,7 +1,7 @@
 /* Strings in Mutliple DIVs
-- create rect() objects, then add FOR Loop demonstrating decreaseing to one line
-- create text() objects, then add FOR Loop, as above
-
+ - create rect() objects, then add FOR Loop demonstrating decreaseing to one line
+ - create text() objects, then add FOR Loop, as above
+ 
  */
 //
 //Display
@@ -67,12 +67,10 @@ println("Font Size:", fontSize );
  */
 //
 //Note: DIV to "see" variables
-rect( stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
-rect( stringDivX2, stringDivY2, stringDivWidth2, stringDivHeight2 );
-rect( stringDivX3, stringDivY3, stringDivWidth3, stringDivHeight3 );
+for ( int i = 0; i<numberOfDIVs; i++) {
+  rect( stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
+} //End FOR DIVs
 //
-//Minimum Lines of code to format, draw text with colour, and become aware of other functions
-//Must be before text()
 
 //Aspect Ratio Calculation
 float harringtonAspectRatio = fontSizeHarrington / stringDivHeight1;
@@ -81,6 +79,8 @@ println("Harrington Aspect Ratio:", harringtonAspectRatio);
 println(); //Skip a line
 //
 //Drawing Text
+//Minimum Lines of code to format, draw text with colour, and become aware of other functions
+//Must be before text()
 color purpleInk = #2C08FF; //AP MiniLesson on bit, 8-bit or byte (grey scale, 256), colour
 color whiteInk = #FFFFFF; //Grey Scale is 255
 color resetInk = whiteInk;

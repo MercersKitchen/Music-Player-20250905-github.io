@@ -52,9 +52,6 @@ println("Font Size:", fontSize );
 //Note: DIV to "see" variables
 rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 //
-//Minimum Lines of code to format, draw text with colour, and become aware of other functions
-//Must be before text()
-
 //Aspect Ratio Calculation
 float harringtonAspectRatio = fontSizeHarrington / stringDivHeight;
 fontSize = stringDivHeight*harringtonAspectRatio;
@@ -62,6 +59,8 @@ println("Harrington Aspect Ratio:", harringtonAspectRatio);
 println(); //Skip a line
 //
 //Drawing Text
+//Minimum Lines of code to format, draw text with colour, and become aware of other functions
+//Must be before text()
 color purpleInk = #2C08FF; //AP MiniLesson on bit, 8-bit or byte (grey scale, 256), colour
 color whiteInk = #FFFFFF; //Grey Scale is 255
 color resetInk = whiteInk;
