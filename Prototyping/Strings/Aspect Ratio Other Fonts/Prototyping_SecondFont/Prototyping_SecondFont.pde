@@ -38,6 +38,7 @@ String title = "Wahoo!"; //Smaller than divWidth
 //Note: pass appHeight into fontSize will change how text is drawn, passing a float does not make this error
 //CAUTION: strange things happen with font sizes, should have WHILE Check and Percentage Decrease Check
 float fontSize = appHeight; //Entire Program, Algorithm to have smallest font size
+//Note: although int changes to float in assignment and intialization, difficult for lower math-levels due to memorization
 PFont titleFont; //Font Varaible Name, able to have more than one Font
 String arial = "Arial Italic"; //Spelling of the Font Matters, see PFont.list() v Create Font above
 //Arial is default when fonts do not work, using italics here to demonstrate difference
@@ -54,6 +55,7 @@ titleFont = createFont(arial, fontSize);
 //** Aspect Ratio records manual changes of declaration-initiation
 float fontSizeArial = 87.0; //fontSize=131 when not initiating with appHeight first
 float divHeightArial = stringDivHeight;
+println("Reference DIV Height for Aspect Ratio:", stringDivHeight);
 float arialAspectRatio = fontSizeArial / divHeightArial;
 fontSize = stringDivHeight*arialAspectRatio; //when testing, use fontSizeHarrington, then calculation
 //println("Arial Italics Aspect Ratio:", arialAspectRatio, "@ Font Size:", fontSize);

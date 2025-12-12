@@ -44,7 +44,7 @@ while ( textWidth( title ) > stringDivWidth ) {
   fontSize *= constantDecrease;
   textFont(titleFont, fontSize);
 } //End WHILE Error Check Text-wrap
-println("Iterations of WHILE:", iWhile, "\tDifference of divWidth & textWidth:", stringDivWidth-textWidth( title ), "\tUsing", constantDecrease*100+"%" );
+println("Iterations of WHILE:", iWhile, "\tPixel difference of divWidth & textWidth:", stringDivWidth-textWidth( title ), "\tUsing", constantDecrease*100+"%" );
 text( title, stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 fill(resetInk);
 //

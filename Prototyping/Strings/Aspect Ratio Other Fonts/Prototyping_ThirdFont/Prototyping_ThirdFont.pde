@@ -37,6 +37,7 @@ String title = "Wahoo!"; //Smaller than divWidth
 //Note: pass appHeight into fontSize will change how text is drawn, passing a float does not make this error
 //CAUTION: strange things happen with font sizes, should have WHILE Check and Percentage Decrease Check
 float fontSize = appHeight; //Entire Program, Algorithm to have smallest font size
+//Note: although int changes to float in assignment and intialization, difficult for lower math-levels due to memorization
 PFont titleFont; //Font Varaible Name, able to have more than one Font
 String bauhaus = "Bauhaus 93"; //Spelling of the Font Matters, see PFont.list() v Create Font above
 //Bauhaus 93 demosntrates difference of spelling from CONSOLE PFont.list() and Tools/CreateFont
@@ -53,6 +54,7 @@ titleFont = createFont(bauhaus, fontSize);
 //** Aspect Ratio records manual changes of declaration-initiation
 float fontSizeBauhaus = 89.0; //fontSize=141 when not initiating with appHeight first
 float divHeightBauhaus = stringDivHeight;
+println("Reference DIV Height for Aspect Ratio:", stringDivHeight);
 float bauhausAspectRatio = fontSizeBauhaus / divHeightBauhaus;
 fontSize = stringDivHeight*bauhausAspectRatio; //when testing, use fontSizeHarrington, then calculation
 //println("Bauhaus Italics Aspect Ratio:", bauhausAspectRatio, "@ Font Size:", fontSize);

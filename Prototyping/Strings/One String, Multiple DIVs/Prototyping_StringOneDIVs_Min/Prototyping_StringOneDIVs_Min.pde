@@ -36,14 +36,12 @@ String harrington = "Harrington";
 titleFont = createFont(harrington, fontSize);
 float fontSizeHarrington = 83.0; //Change the number until it fits, largest font size
 float divHeightHarrington = stringDivHeight[0];
+float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington;
+fontSize = stringDivHeight[0]*harringtonAspectRatio; // Font fits in first DIV only
 //
 for ( int i=0; i<numberOfDIVs; i++ ) {
   rect( stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
 } //End FOR DIVs
-//
-//Aspect Ratio Calculation
-float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington;
-fontSize = stringDivHeight[0]*harringtonAspectRatio; // Font fits in first DIV only
 //
 //Drawing Text
 color purpleInk = #2C08FF;

@@ -38,6 +38,7 @@ String title = "Wahoo!"; //Smaller than divWidth
 //Note: pass appHeight into fontSize will change how text is drawn, passing a float does not make this error
 //CAUTION: strange things happen with font sizes, should have WHILE Check and Percentage Decrease Check
 float fontSize = appHeight; //Entire Program, Algorithm to have smallest font size
+//Note: although int changes to float in assignment and intialization, difficult for lower math-levels due to memorization
 PFont titleFont; //Font Varaible Name, able to have more than one Font
 String harrington = "Harrington"; //Spelling of the Font Matters, see PFont.list() v Create Font above
 //Reminder: only letters ending with numbers, underscore means camelCase or snake_case
@@ -52,7 +53,8 @@ titleFont = createFont(harrington, fontSize);
  */
 //** Aspect Ratio records manual changes of declaration-initiation
 float fontSizeHarrington = 83.0; //fontSize=129 before initializing with appHeight, Change the number until it fits, largest font size
-float divHeightHarrington = stringDivHeight;
+float divHeightHarrington = stringDivHeight; //Key:Value, value=120
+println("Reference DIV Height for Aspect Ratio:", stringDivHeight);
 float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington;
 fontSize = stringDivHeight*harringtonAspectRatio; //when testing, use fontSizeHarrington, then calculation
 //println("Harrington Aspect Ratio:", harringtonAspectRatio, "@ Font Size:", fontSize);

@@ -1,13 +1,32 @@
 Done
 
-Single DIV
-Multiple DIVs, smallest DIV
+Overview of Concepts and Exemplars ... how do we expand abstraction in algorithmic thinking
+- Big M Concepts
+- CS Exemplars & Best Practices
+- Debugging as knowledge and best guess
+  Choosing font spelling is best guess between CONSOLE and Tools / Create Font
 
----
+Concatenation, not Ascii Art make work exercise in CONSOLE
+** We have come a long way since January 1, 1970 (CS Time Counting Joke)
 
-Multiple Strings, Multiple Fonts
-- Experiment Font Aspect Ratio
-- Multiple Fonts and Multiple Strings in Multiple DIVs, smallest font for consistency
+Arrays abstracts the group name to something countable by humans
+
+JSON Data: key;value pairs
+- expand vocabulary as a data set to expand conceptual understanding and increase abstraction
+
+As one algorithm problem is solved, another occurs
+Change Code
+Change Mathematics
+
+
+Big M
+- Range of Fonts from appHeight to drawable to wrapped to see entire string
+
+Creativity requires time to work and process
+
+
+
+
 
 ---
 
@@ -17,7 +36,6 @@ Order
 - Multiple Strings, Multiple DIVs
 - Multiple Fonts, Multiple, Strings, and Multiple DIVs
 
----
+After comparing Aspect Ratio Font Programs, multiple strings and multiple DIVs
+Should have idea about different parts of text program
 
-Big M
-- Range of Fonts from appHeight to drawable to wrapped to see entire string

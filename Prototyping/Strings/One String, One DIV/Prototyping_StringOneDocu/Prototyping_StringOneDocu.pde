@@ -55,7 +55,7 @@ float fontSizeHarrington = 83.0; //Change the number until it fits, largest font
 float divHeightHarrington = stringDivHeight;
 float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington;
 fontSize = stringDivHeight*harringtonAspectRatio;
-//println("Harrington Aspect Ratio:", harringtonAspectRatio);
+//println("Harrington Aspect Ratio:", harringtonAspectRatio, "@ Font Size:", fontSize);
 //
 //Note: DIV to "see" variables
 rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
@@ -70,8 +70,10 @@ fill(purpleInk); //Ink, hexidecimal copied from Color Selector
 //Grey Scale 0-255
 textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
-//ERROR Check fontSize, decreasing the text when wrapped or not shown
-textFont(titleFont, fontSize); //see variable note
+//WHILE Error Check fontSize, decreasing the text when wrapped or not shown
+textFont(titleFont, fontSize);
+//textFont() has option to combine font declaration with textSize()
+//textFont() is better for more than one PFont Variable
 float constantDecrease = 0.99;  //99% of origonal or 1% decrease, change to optimize and count up with pixels
 int iWhile=0; //Counting iterations of WHILE, adjust with optimization and pixel decrease adjustment algorithm
 while ( textWidth( title ) > stringDivWidth ) {
@@ -80,10 +82,7 @@ while ( textWidth( title ) > stringDivWidth ) {
   fontSize *= constantDecrease; //Assignment Operator  //fontSize = fontSize*0.99;
   textFont(titleFont, fontSize); //see variable note
 } //End WHILE Error Check Text-wrap
-println("Iterations of WHILE:", iWhile, "\tDifference of divWidth & textWidth:", stringDivWidth-textWidth( title ), "\tUsing", constantDecrease*100+"%" );
-//WHILE Error Check
-//textFont() has option to combine font declaration with textSize()
-//textFont() is better for more than one PFont Variable
+println("Iterations of WHILE:", iWhile, "\tPixel difference of divWidth & textWidth:", stringDivWidth-textWidth( title ), "\tUsing", constantDecrease*100+"%" );
 //
 text( title, stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 fill(resetInk);
