@@ -77,5 +77,4 @@ textFont(titleFont, fontSize); //must include textSize() before text() & textWid
 text( title, stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 fill(resetInk);
 //
-//End
 //End MAIN Program

@@ -50,4 +50,4 @@ rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 //image( image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 image( image1, imageDivX, imageDivY, imageWidthAdjusted1, imageHeightAdjusted1 );
 //
-//End Program
+//End MAIN Program

@@ -15,9 +15,11 @@ int appHeight = displayHeight;
 //rect(x, y, width, height);
 //Note: the debuggger expects rectangles to have float or double type variables
 //Using Ratios
-float imageX = appWidth * 1/4;
-float imageY = appHeight * 1/4;
-float imageWidth = appWidth * 1/2;
-float imageHeight = appHeight * 1/2;
+float imageDivX = appWidth * 70/279; //Akward DIV, must rename all Mr. Mercer's Variables
+float imageDivY = appHeight * 54/216;
+float imageDivWidth = appWidth * 140/279;
+float imageDivHeight = appHeight * 108/216;
 //
-rect(imageX, imageY, imageWidth, imageHeight);
+rect(imageDivX, imageDivY, imageDivWidth, imageDivHeight);
+//
+//End MAIN Program

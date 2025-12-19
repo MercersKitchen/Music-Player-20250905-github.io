@@ -87,5 +87,4 @@ println("Iterations of WHILE:", iWhile, "\tPixel difference of divWidth & textWi
 text( title, stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 fill(resetInk);
 //
-//End
 //End MAIN Program
