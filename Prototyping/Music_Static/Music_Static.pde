@@ -22,3 +22,5 @@ import ddf.minim.ugens.*;
 Minim minim; //initates entire class
 int numberOfSong = 1; //Best Practice
 int numberOfSoundEffects = 1; //Best Practice
+AudioPlayer[] playList = new AudioPlayer[];
+AudioPlayer[] soundEffects = new AudioPlayer[];
