@@ -9,6 +9,11 @@
  ** You are now able to research any Processing-Java Library ... or Any Java Library from the internet **
  - Processing-Java Libraries must be installed into the IDE
  - Java Libraries simply require the 'import' declaration
+ 
+ - Note: Hard Drive Registery or address
+ 
+ - Library will not execute since not using full compiler
+ 
  */
 //Library - Minim
 import ddf.minim.*;
