@@ -34,9 +34,14 @@ int appHeight = height;
 //
 //Music Loading - STRUCTURED Review
 minim = new Minim(this);
-
-
-
+String upArrow = "../../";
+String musicFolder = "Music/"; //Developer Specific
+String normalFolder = "Normal/"; //Developer Specific
+String songName1 = "groove";
+String fileExtension_mp3 = ".mp3";
+//
+String musicDirectory = upArrow + musicFolder + normalFolder; //Concatenation
+println(musicDirectory);
 
 playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
 //
