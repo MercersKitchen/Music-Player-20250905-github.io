@@ -32,3 +32,13 @@ size(700, 500); //width //height
 int appWidth = width;
 int appHeight = height;
 //
+//Music Loading - STRUCTURED Review
+minim = new Minim(this);
+
+
+
+
+playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+//
+println("Did the music and sound load properly");
+printArray(playList);
