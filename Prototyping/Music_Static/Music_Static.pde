@@ -43,17 +43,17 @@ String soundEffect1 = "Car_Door_Closing";
 String fileExtension_mp3 = ".mp3";
 //
 String musicDirectory = upArrow + musicFolder + normalFolder; //Concatenation
-String soundEffectsDirectory = upArrow + musicFolder + soundEffectsFolder;
-String file = musicDirectory + songName1 + fileExtension_mp3;
+String soundEffectsDirectory = upArrow + musicFolder + soundEffectsFolder; //Concatenation
+String file = musicDirectory + songName1 + fileExtension_mp3; //TO BE Rewritten and deleted once file is LOADED
 playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
-file = soundEffectsDirectory + soundEffect1 + fileExtension_mp3;
-soundEffects[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+file = soundEffectsDirectory + soundEffect1 + fileExtension_mp3; //Rewritting FILE
+soundEffects[currentSong] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
 //
-
-//
+//ERROR Check Music and Sound Effect Variables
+//Thrown by commenting out FILE, playList[] or soundEffects[]
 if ( playList[currentSong]==null || soundEffects[currentSong]==null) { //ERROR, play list is NULL
   //See FILE or minim.loadFile
-  println("The Play List did not load properly");
+  println("The Play List or Sound Effects did not load properly");
   printArray(playList);
   printArray(soundEffects);
   /*
