@@ -13,9 +13,21 @@
  - Once setup() is done, draw() starts looping
  - Can temporarily pause draw() with noLoop() & loop() to wait (behind booleans or interactions)
  - Note: delay() will stop the program for a specified time
+ 
+ - Reading Code the cursor & braces
+ 
  */
 //
 //Library - Minim
 //
 //Global Variables
 //
+void setup() {} //End setup
+//
+void draw() {} //End draw
+//
+void mousePressed() {} //End Mouse Pressed
+//
+void keyPressed() {} //End Key Pressed 
+//
+//End MAIN Program
