@@ -58,12 +58,13 @@ void setup() {
   } //End ERROR Check Music and Sound Effect Variables
   //
   //Testing Sound
-  playList[currentSong].play();
+  //playList[currentSong].play();
   //soundEffects[currentSong].play();
   //
 } //End setup
 //
 void draw() {
+  playList[currentSong].play(); //DRAW is deactived by noLoop()
 } //End draw
 //
 void mousePressed() {
