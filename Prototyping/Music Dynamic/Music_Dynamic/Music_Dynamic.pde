@@ -58,7 +58,7 @@ void setup() {
   } //End ERROR Check Music and Sound Effect Variables
   //
   //Testing Sound
-  //playList[currentSong].play();
+  playList[currentSong].play(); //Deactivates void draw()
   //soundEffects[currentSong].play();
   //
 } //End setup
