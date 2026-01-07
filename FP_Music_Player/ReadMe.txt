@@ -1,6 +1,6 @@
-Steps
+Steps, Verification must happen with Experience and ERROR Checks
 
-Staric to Dynamic: play a song or sound effect
+Static to Dynamic: play a song or sound effect
 
 ---
 
