@@ -1,5 +1,6 @@
 /* Hearing Music and Sound Effects
-//
+ - Reading Code with CTRL-T & Braces
+ */
 //
 //Library - Minim
 //Reminder: activate the Library
