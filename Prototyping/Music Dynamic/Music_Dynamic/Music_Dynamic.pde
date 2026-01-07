@@ -29,7 +29,7 @@ void setup() {
   //
   //Music Loading - STRUCTURED Review
   minim = new Minim(this); //Manditory
-  String upArrow = "../../";
+  String upArrow = "../../../";
   String musicFolder = "Music/"; //Developer Specific
   String soundEffectsFolder = "Sound Effects/"; //Developer Specific
   String normalFolder = "Normal/"; //Developer Specific
@@ -57,7 +57,9 @@ void setup() {
      */
   } //End ERROR Check Music and Sound Effect Variables
   //
-  
+  //Testing Sound
+  playList[currentSong].play();
+  //soundEffects[currentSong].play();
   //
 } //End setup
 //
