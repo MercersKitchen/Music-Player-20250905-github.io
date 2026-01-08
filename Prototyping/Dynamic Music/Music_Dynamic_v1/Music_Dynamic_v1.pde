@@ -1,4 +1,5 @@
-/* Hearing Music and Sound Effects
+/* Copied from  Music Static
+ - Hearing Music and Sound Effects
  - Reading Code with CTRL-T & Braces
  - Global Variable V Local Variable, Garbage Collection
  */
