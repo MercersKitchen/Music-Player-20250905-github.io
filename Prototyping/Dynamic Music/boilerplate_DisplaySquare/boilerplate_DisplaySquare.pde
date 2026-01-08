@@ -1,5 +1,5 @@
 /* Program Documentation & Notes
- - Largest Square Display Possible
+ - Largest Square Display Possible on any DISPLAY
  */
 //Library - Minim
 //
@@ -10,6 +10,8 @@ void settings() {
   int shorterSide = ( displayWidth > displayHeight ) ? displayHeight : displayWidth ; //Ternary Operator
   shorterSide *= 0.9; //90%, WINDOW Frame
   size(shorterSide, shorterSide); //ERROR IllegalStateException: cannot use a var in size()
+  println("Display Questions", displayWidth, displayHeight, shorterSide);
+  println("CANVAS Size Key Variables for setup()", width, height);
 } //End settings
 //
 void setup() {
