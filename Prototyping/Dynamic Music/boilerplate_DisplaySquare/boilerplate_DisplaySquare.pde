@@ -1,5 +1,12 @@
 /* Program Documentation & Notes
  - Largest Square Display Possible on any DISPLAY
+ 
+ - Using Display to Alter CANVAS size() with local variable
+ - Unique example increasing awareness
+ - Reading DOCUMENTATION is required
+ 
+ - See: https://processing.org/reference/settings_.html
+ - Simple Example Included there
  */
 //Library - Minim
 //
@@ -23,13 +30,10 @@ void setup() {
   //fullScreen(); //displayWidth, displayHeight
 } //End setup
 //
-void draw() {
-} //End draw
+void draw() {} //End draw
 //
-void mousePressed() {
-} //End Mouse Pressed
+void mousePressed() {} //End Mouse Pressed
 //
-void keyPressed() {
-} //End Key Pressed
+void keyPressed() {} //End Key Pressed
 //
 //End MAIN Program
