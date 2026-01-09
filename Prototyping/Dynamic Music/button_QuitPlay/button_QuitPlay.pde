@@ -5,9 +5,12 @@
  - Specific Debugging Topics
  - draw() varaibles initiated in Global Varaibles due to LOOP
  - MouseX & Y keyVariables
+ - Using println() to test functionality
  
  - What to copy and paste
  - Quit & Play DIV
+
+ - Next Program to Update: Music Dynamic v2
  
  */
 //
@@ -19,7 +22,7 @@ float quitDivX, quitDivY, quitDivWidth, quitDivHeight;
 float playDivX, playDivY, playDivWidth, playDivHeight;
 float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3;
 //
-Boolean playButton;
+Boolean playButton=false;
 //
 void setup() {
   //Display
@@ -51,15 +54,18 @@ void setup() {
 //
 void draw() {
   //println ("My Mouse is", mouseX, mouseY);
+  //Button HoverOver
   if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
     //println("Wahoo! I'm playing you");
     playButton = true;
   } else {
     //print(" ");
+    playButton = false;
   }
 } //End draw
 //
 void mousePressed() {
+  //Music Play Functions
   if ( playButton == true ) {
     println("Play My Song");
   } else {
