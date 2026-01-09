@@ -19,6 +19,8 @@ float quitDivX, quitDivY, quitDivWidth, quitDivHeight;
 float playDivX, playDivY, playDivWidth, playDivHeight;
 float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3;
 //
+Boolean playButton;
+//
 void setup() {
   //Display
   size(500, 400);
@@ -48,11 +50,21 @@ void setup() {
 } //End setup
 //
 void draw() {
-  println ("My Mouse is", mouseX, mouseY);
-  if () println("Wahoo! I'm playing you");
+  //println ("My Mouse is", mouseX, mouseY);
+  if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
+    //println("Wahoo! I'm playing you");
+    playButton = true;
+  } else {
+    //print(" ");
+  }
 } //End draw
 //
 void mousePressed() {
+  if ( playButton == true ) {
+    println("Play My Song");
+  } else {
+    println(" ");
+  }
 } //End Mouse Pressed
 //
 void keyPressed() {
