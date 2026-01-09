@@ -3,6 +3,7 @@
  - Introducing Booleans to communicate between procedures, 1 bite of information
  
  - Specific Debugging Topics
+ - draw() varaibles initiated in Global Varaibles due to LOOP
  - MouseX & Y keyVariables
  
  - What to copy and paste
@@ -20,9 +21,10 @@ float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, play
 //
 void setup() {
   //Display
-  fullScreen();
-  appWidth = displayWidth;
-  appHeight = displayHeight;
+  size(500, 400);
+  //fullScreen();
+  appWidth = width;
+  appHeight = height;
   //
   //Population
   quitDivX = appWidth * 9/10;
@@ -46,6 +48,8 @@ void setup() {
 } //End setup
 //
 void draw() {
+  println ("My Mouse is", mouseX, mouseY);
+  if () println("Wahoo! I'm playing you");
 } //End draw
 //
 void mousePressed() {
