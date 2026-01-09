@@ -9,6 +9,13 @@
  
  - What to copy and paste
  - Quit & Play DIV
+ 
+ 
+ CONTINUE HERE
+ 
+ 
+ 
+ - Quit Button: Time Stamp specficially noLoop() and exit()
 
  - Next Program to Update: Music Dynamic v2
  
