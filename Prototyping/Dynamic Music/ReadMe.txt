@@ -10,21 +10,22 @@ Compare to Adding Small Programs into Full Program Music Player
 ---
 
 boilerplate
-Music_Dynamic_Copied from Static
-boilerplate-settings Square Geometry
-TimeStamping: see ReadMe.md
+Music_Dynamic_v1 Copied from Static
+boilerplate_DisplaySquare
+boilerplate_TimeStamp
+
+---
+
+button_QuitPlay
+- Hover Over (using MouseX&Y)
+- Activated Color Change ( .isPlaying() ) using Boolean and mousePressed(){} with hoverover
+
+Night Mode: gray scale
+
+Day Mode: QE Colours, reversed when activated (repetition and contrast)
+
 
 --- 
-
-Quit Button
-Play Button
-
-Hover Over
-Activated Color Change ( .isPlaying() )
-
-CS20 - Developed IFs
-Night Mode for Buttons & Text
-- Night: Black v white, gray activation v colour activation
 
 Adding all Music
 Text from Music
