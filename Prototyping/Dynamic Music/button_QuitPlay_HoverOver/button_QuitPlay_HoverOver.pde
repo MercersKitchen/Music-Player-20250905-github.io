@@ -57,6 +57,14 @@ void setup() {
   rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
   rect(playDivX, playDivY, playDivWidth, playDivHeight);
   triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
+  //
+  //Colour Population
+  color black = 0; //Gray Scale, much smaller color, 256 bits
+  color white = 0; //Gray Scale
+  //CANVAS: default background and ink
+  resetBackground = white;
+  resetInk = black;
+  //
 } //End setup
 //
 void draw() {
