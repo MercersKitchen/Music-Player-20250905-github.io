@@ -73,7 +73,10 @@ void setup() {
   color yellow = #FFFF00;
   color grayScale = 256/2; //Example Gray Scale, small memory
   color gray = #B9B9B9; //Example Gray Scale, large memory
-  
+  playColourBackground = purple;
+  playColourSymbol = yellow;
+  playColourBackgroundActivated = yellow;
+  playColourSymbolActivated = purple;
   
   //
 } //End setup
