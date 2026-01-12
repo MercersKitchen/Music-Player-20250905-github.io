@@ -31,6 +31,8 @@ float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, play
 //
 Boolean playButton=false;
 //
+color resetBackground, resetInk;
+//
 void setup() {
   //Display
   size(500, 400);
