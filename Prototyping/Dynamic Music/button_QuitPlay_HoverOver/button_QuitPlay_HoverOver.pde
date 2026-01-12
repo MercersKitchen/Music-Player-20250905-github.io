@@ -33,6 +33,7 @@ Boolean playButton=false;
 //
 color resetBackground, resetInk;
 color playColourBackground, playColourSymbol, playColourBackgroundActivated, playColourSymbolActivated;
+color quitBackground, quitBackgroundActivated;
 //
 void setup() {
   //Display
@@ -63,7 +64,7 @@ void setup() {
   //
   //Colour Population
   color black = 0; //Gray Scale, much smaller color, 256 bits
-  color white = 0; //Gray Scale
+  color white = 255; //Gray Scale
   //CANVAS: default background and ink
   resetBackground = white;
   resetInk = black;
@@ -77,8 +78,9 @@ void setup() {
   playColourSymbol = yellow;
   playColourBackgroundActivated = yellow;
   playColourSymbolActivated = purple;
-
-  //
+  quitBackground = white;
+  quitBackgroundActivated = red;
+    //
 } //End setup
 //
 void draw() {
@@ -101,7 +103,15 @@ void draw() {
     triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
     fill(resetBackground);
   }//End Play Button Hover Over
-  if () else ()//End Quit Button Hover Over
+  if ( mouseX>quitDivX && mouseX<quitDivX+quitDivWidth && mouseY>quitDivY &&mouseY<quitDivY+quitDivHeight ) {
+    fill(quitBackgroundActivated);
+    rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
+    fill(resetBackground);
+  } else {
+    fill(quitBackground);
+    rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
+    fill(resetBackground);
+  }//End Quit Button Hover Over
   //
 } //End draw
 //
