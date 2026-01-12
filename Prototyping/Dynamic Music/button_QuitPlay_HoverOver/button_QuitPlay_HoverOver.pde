@@ -32,6 +32,7 @@ float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, play
 Boolean playButton=false;
 //
 color resetBackground, resetInk;
+color playColourBackground, playColourSymbol, playColourBackgroundActivated, playColourSymbolActivated;
 //
 void setup() {
   //Display
@@ -66,9 +67,7 @@ void setup() {
   //CANVAS: default background and ink
   resetBackground = white;
   resetInk = black;
-  //Button Colours
-  color 
-  
+  //Button Colours  
   color red = #FF0000;
   color purple = #9D03FF; //human name for hexidecimal code
   color yellow = #FFFF00;
