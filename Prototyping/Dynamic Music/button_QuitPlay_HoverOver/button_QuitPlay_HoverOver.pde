@@ -16,7 +16,7 @@
  
  
  - Quit Button: Time Stamp specficially noLoop() and exit()
-
+ 
  - Next Program to Update: Music Dynamic v2
  
  */
@@ -67,7 +67,7 @@ void setup() {
   //CANVAS: default background and ink
   resetBackground = white;
   resetInk = black;
-  //Button Colours  
+  //Button Colours
   color red = #FF0000;
   color purple = #9D03FF; //human name for hexidecimal code
   color yellow = #FFFF00;
@@ -77,22 +77,31 @@ void setup() {
   playColourSymbol = yellow;
   playColourBackgroundActivated = yellow;
   playColourSymbolActivated = purple;
-  
+
   //
 } //End setup
 //
 void draw() {
   //println ("My Mouse is", mouseX, mouseY);
+  //Button HoverOver
   if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
     //println("Wahoo! I'm playing you");
     playButton = true;
+    //fill();
+    rect(playDivX, playDivY, playDivWidth, playDivHeight);
+    //fill();
+    triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
+    //fill();
   } else {
     //print(" ");
     playButton = false;
+    fill();
+    rect(playDivX, playDivY, playDivWidth, playDivHeight);
+    fill();
+    triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
+    fill();
   }//End Introduction of DRAW()
   //
-  //Button HoverOver
-  
 } //End draw
 //
 void mousePressed() {
