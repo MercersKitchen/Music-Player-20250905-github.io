@@ -87,20 +87,21 @@ void draw() {
   if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
     //println("Wahoo! I'm playing you");
     playButton = true;
-    //fill();
+    fill(playColourBackgroundActivated);
     rect(playDivX, playDivY, playDivWidth, playDivHeight);
-    //fill();
+    fill(playColourSymbolActivated);
     triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
-    //fill();
+    fill(resetBackground);
   } else {
     //print(" ");
     playButton = false;
-    fill();
+    fill(playColourBackground);
     rect(playDivX, playDivY, playDivWidth, playDivHeight);
-    fill();
+    fill(playColourSymbol);
     triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
-    fill();
-  }//End Introduction of DRAW()
+    fill(resetBackground);
+  }//End Play Button Hover Over
+  if () else ()//End Quit Button Hover Over
   //
 } //End draw
 //
