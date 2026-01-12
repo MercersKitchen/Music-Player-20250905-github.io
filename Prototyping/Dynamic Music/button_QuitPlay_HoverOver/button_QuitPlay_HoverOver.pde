@@ -61,14 +61,16 @@ void setup() {
 //
 void draw() {
   //println ("My Mouse is", mouseX, mouseY);
-  //Button HoverOver
   if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
     //println("Wahoo! I'm playing you");
     playButton = true;
   } else {
     //print(" ");
     playButton = false;
-  }
+  }//End Introduction of DRAW()
+  //
+  //Button HoverOver
+  
 } //End draw
 //
 void mousePressed() {
