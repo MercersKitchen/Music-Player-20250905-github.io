@@ -66,6 +66,16 @@ void setup() {
   //CANVAS: default background and ink
   resetBackground = white;
   resetInk = black;
+  //Button Colours
+  color 
+  
+  color red = #FF0000;
+  color purple = #9D03FF; //human name for hexidecimal code
+  color yellow = #FFFF00;
+  color grayScale = 256/2; //Example Gray Scale, small memory
+  color gray = #B9B9B9; //Example Gray Scale, large memory
+  
+  
   //
 } //End setup
 //
