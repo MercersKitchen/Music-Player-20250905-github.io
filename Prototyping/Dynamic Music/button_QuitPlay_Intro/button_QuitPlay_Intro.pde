@@ -64,6 +64,7 @@ void mousePressed() {
   //Music Play Functions
   if ( playButton == true ) {
     println("Play My Song");
+    playButton=false; //reset Boolean for draw()
   } else {
     println(" ");
   }

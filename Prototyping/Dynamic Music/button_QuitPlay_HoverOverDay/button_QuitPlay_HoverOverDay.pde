@@ -1,21 +1,12 @@
-/* Creating Buttons
- - Understanding how the mixing of boilerplate happens
- - Introducing Booleans to communicate between procedures, 1 bite of information
+/* Creating Buttons - HoverOver in draw()
+ - draw() updates mouseX&Y 60x per second
+ - CANVAS will repeat all code
+ - effect is rect() are layered like a flip book 60x per second
+ - creates change
  
- - Specific Debugging Topics
- - draw() varaibles initiated in Global Varaibles due to LOOP
- - MouseX & Y keyVariables
- - Using println() to test functionality
- 
- - What to copy and paste
- - Quit & Play DIV
- 
- 
- CONTINUE HERE
- 
- 
- 
- - Quit Button: Time Stamp specficially noLoop() and exit()
+ - Next
+ - Play Button Function including println()
+ - Quit Button Function including noLoop() & exit()
  
  - Next Program to Update: Music Dynamic v2
  
@@ -119,6 +110,7 @@ void mousePressed() {
   //Music Play Functions
   if ( playButton == true ) {
     println("Play My Song");
+    playButton=false; //reset Boolean for draw()
   } else {
     println(" ");
   }
