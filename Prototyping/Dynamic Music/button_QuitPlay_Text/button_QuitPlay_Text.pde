@@ -1,17 +1,6 @@
-/* Creating Buttons - HoverOver in draw()
- - draw() updates mouseX&Y 60x per second
- - CANVAS will repeat all code
- - effect is rect() are layered like a flip book 60x per second
- - creates change
- 
- - Code explored: If-Else
- 
- - Next
- - Play Button Function including println()
- - Quit Button Function including noLoop() & exit()
- 
- - Next Program to Update: Music Dynamic v2
- 
+/* Creating Buttons - Text in the Button
+ - Simple Algorithm ... not discussing variables, fonts, DIVs, iterations, or errors
+ - Default font size ... may be difficult to see depending on Display Geometry
  */
 //
 //Library - Minim
@@ -22,13 +11,13 @@ float quitDivX, quitDivY, quitDivWidth, quitDivHeight;
 float playDivX, playDivY, playDivWidth, playDivHeight;
 float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3;
 //
-Boolean playButton=false;
+Boolean playButton=false, quitButton=false;
 //
 color resetBackground, resetInk, resetBackgroundDay, resetInkDay, resetBackgroundNight, resetInkNight;
 color quitButtonInk;
 color playColourBackground, playColourSymbol, playColourBackgroundActivated, playColourSymbolActivated;
 color quitBackground, quitBackgroundActivated;
-Boolean nightMode;
+Boolean nightMode=false;
 //
 void setup() {
   //Display
@@ -144,6 +133,12 @@ void draw() {
 } //End draw
 //
 void mousePressed() {
+  //Quit Button: does not use Boolean, only mouseX&Y already present in system key variables
+  if ( mouseX>quitDivX && mouseX<quitDivX+quitDivWidth && mouseY>quitDivY &&mouseY<quitDivY+quitDivHeight ) {
+    noLoop(); //Adjusts the exit of the program using finishing draw()
+    exit(); //With noLoop(), exit happens here
+    println("Final Line of mousePressed and finishes draw()");
+  }
   //Music Play Functions
   if ( playButton == true ) {
     println("Play My Song");
