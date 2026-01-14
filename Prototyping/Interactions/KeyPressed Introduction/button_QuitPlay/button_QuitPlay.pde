@@ -1,11 +1,10 @@
-/* Creating Buttons - HoverOver in draw() with NightMode and Simple Text
+/* Creating Buttons - HoverOver in draw()
  - draw() updates mouseX&Y 60x per second
  - CANVAS will repeat all code
  - effect is rect() are layered like a flip book 60x per second
  - creates change
  
  - Code explored: If-Else
- - Ultra simple text algorithm not fit for mutliple displays
  
  - Next
  - Play Button Function including println()
@@ -23,13 +22,13 @@ float quitDivX, quitDivY, quitDivWidth, quitDivHeight;
 float playDivX, playDivY, playDivWidth, playDivHeight;
 float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3;
 //
-Boolean playButton=false;
+Boolean playButton=false, quitButton=false;
 //
 color resetBackground, resetInk, resetBackgroundDay, resetInkDay, resetBackgroundNight, resetInkNight;
 color quitButtonInk;
 color playColourBackground, playColourSymbol, playColourBackgroundActivated, playColourSymbolActivated;
 color quitBackground, quitBackgroundActivated;
-Boolean nightMode;
+Boolean nightMode=false;
 //
 void setup() {
   //Display
@@ -130,7 +129,7 @@ void draw() {
     fill(resetBackground);
     fill(quitButtonInk);
     //Note: rect() starts top-right corner, text() starts bottom-right corner
-   text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5); //adjust fractions or decimals until working
+    text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5); //adjust fractions or decimals until working
     fill(resetInk);
   } else {
     fill(quitBackground);
@@ -145,6 +144,10 @@ void draw() {
 } //End draw
 //
 void mousePressed() {
+  //Quit Button: does not use Boolean, only mouseX&Y already present in system key variables
+  if ( mouseX>quitDivX && mouseX<quitDivX+quitDivWidth && mouseY>quitDivY &&mouseY<quitDivY+quitDivHeight ) {
+    quitButton();
+  }
   //Music Play Functions
   if ( playButton == true ) {
     println("Play My Song");
@@ -155,6 +158,20 @@ void mousePressed() {
 } //End Mouse Pressed
 //
 void keyPressed() {
+  //Note, CAPs Lock on Code: key=='[CAP]' || key=='[lowerCase]'
+  //CAUTION: Order Matters 
+  if (key=='Q' || key=='q') {
+    quitButton();
+  } //Quit Button
 } //End Key Pressed
+//
+void quitButton() {
+  noLoop(); //Adjusts the exit of the program using finishing draw()
+  exit(); //With noLoop(), exit happens here
+  println("Final Line of mousePressed and finishes draw()");
+}//End Quit Button
+//
+void nightModeButton() {
+}//End Night Mode Button
 //
 //End MAIN Program
