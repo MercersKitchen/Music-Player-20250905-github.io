@@ -69,7 +69,7 @@ void setup() {
   resetInkDay = black;
   resetBackgroundNight = 256/4;
   resetInkNight = int(256*0.75); // 3/4 of origoinal, not 1/4
-  println("Casting answer is:", resetInkNight); //Exactly 192, no rounding invovled, checked on calculator
+  //println("Casting answer is:", resetInkNight); //Exactly 192, no rounding invovled, checked on calculator
   //Button Colours: layering local variables leads to preferences controled by Booleans
   color red = #FF0000;
   color purple = #9D03FF; //human name for hexidecimal code
