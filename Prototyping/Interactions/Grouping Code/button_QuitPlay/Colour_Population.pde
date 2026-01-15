@@ -1,7 +1,6 @@
 void colourPopulation() {
   nightModeVariables();
   buildingColours();
-  
 }//End Colour Population
 //
 void nightModeVariables() {
