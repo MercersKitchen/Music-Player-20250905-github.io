@@ -33,11 +33,10 @@ Boolean nightMode=false;
 void setup() {
   //Display
   size(500, 400);
-  //fullScreen();
   appWidth = width;
   appHeight = height;
   //
-  //Population
+  //Population: verified by CANVAS comparison to Case Study
   quitDivX = appWidth * 9/10;
   quitDivY = appHeight * 0/10;
   quitDivWidth = appWidth * 1/10;
