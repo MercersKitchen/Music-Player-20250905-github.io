@@ -1,4 +1,9 @@
 Add the Library
+Add display
+Add DIVs: global variables, DIV Population, and rect()
+
+CONTNIUE HERE
+
 Add the keyPressed Music Functions
   - Separate into named functions for mousePressed() & keyPressed()
 Load multiple Songs, see previous program
