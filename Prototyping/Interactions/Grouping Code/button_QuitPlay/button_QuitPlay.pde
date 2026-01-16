@@ -65,6 +65,7 @@ void draw() {
   if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
     if ( playButton == false ) playButtonActive();
   } else {
+    //Order of below creates optical illusion - switching colours
     playButtonReady();
     if ( playButton == true ) playButtonActive();
   }//End Play Button Hover Over
