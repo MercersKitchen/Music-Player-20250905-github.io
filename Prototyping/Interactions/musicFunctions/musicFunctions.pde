@@ -1,5 +1,6 @@
 /* Creating Buttons - HoverOver in draw()
  - Add Minim from Sketch / Import Library / Minim
+ - Display: fullScreen() v. use shorter side as a Square based on fullScreen
  */
 //
 //Library - Minim
@@ -11,7 +12,16 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 //
 //Global Variables
-//
+/*
+void settings() {
+  println(displayWidth, displayHeight);
+  int shorterSide = ( displayWidth > displayHeight ) ? displayHeight : displayWidth ; //Ternary Operator
+  shorterSide *= 0.9; //90%, WINDOW Frame
+  size(shorterSide, shorterSide); //ERROR IllegalStateException: cannot use a var in size()
+  println("Display Questions", displayWidth, displayHeight, shorterSide);
+  println("CANVAS Size Key Variables for setup()", width, height);
+} //End settings
+*/
 void setup() {
   //Display CANVAS
   //size(); //width //height
