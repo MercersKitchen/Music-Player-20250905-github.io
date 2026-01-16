@@ -5,6 +5,8 @@
 //Library - Minim
 //
 //Global Variables
+//Note: Move the Global Variables to their subprograms
+//All Global Variables execute first ... A global Variable is a Global Variable
 int appWidth, appHeight;
 float quitDivX, quitDivY, quitDivWidth, quitDivHeight;
 float playDivX, playDivY, playDivWidth, playDivHeight;
@@ -54,56 +56,49 @@ void setup() {
 //
 void draw() {
   //println ("My Mouse is", mouseX, mouseY);
+  //println (playButton);
   //Button HoverOver
-  if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
-    //println("Wahoo! I'm playing you");
-    playButton = true;
-    fill(playColourBackgroundActivated);
-    rect(playDivX, playDivY, playDivWidth, playDivHeight);
-    fill(playColourSymbolActivated);
-    triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
-    fill(resetBackground);
-  } else {
-    //print(" ");
-    playButton = false;
-    fill(playColourBackground);
-    rect(playDivX, playDivY, playDivWidth, playDivHeight);
-    fill(playColourSymbol);
-    triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
-    fill(resetBackground);
-  }//End Play Button Hover Over
   if ( mouseX>quitDivX && mouseX<quitDivX+quitDivWidth && mouseY>quitDivY &&mouseY<quitDivY+quitDivHeight ) {
-    fill(quitBackgroundActivated);
-    rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
-    fill(resetBackground);
-    fill(quitButtonInk);
-    //Note: rect() starts top-right corner, text() starts bottom-right corner
-    text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5); //adjust fractions or decimals until working
-    fill(resetInk);
+    quitButtonActive();
   } else {
-    fill(quitBackground);
-    rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
-    fill(resetBackground);
-    fill(quitButtonInk);
-    //Note: rect() starts top-right corner, text() starts bottom-right corner
-    text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5); //adjust fractions or decimals until working
-    fill(resetInk);
+    quitButtonRegular();
   }//End Quit Button Hover Over
+  if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
+    if ( playButton == false ) playButtonActive();
+  } else {
+    playButtonReady();
+    if ( playButton == true ) playButtonActive();
+  }//End Play Button Hover Over
   //
 } //End draw
 //
 void mousePressed() {
   //Quit Button: does not use Boolean, only mouseX&Y already present in system key variables
+  //CAUTION: must use if-elseIf-else or Clickable Screen will get confused
   if ( mouseX>quitDivX && mouseX<quitDivX+quitDivWidth && mouseY>quitDivY &&mouseY<quitDivY+quitDivHeight ) {
     quitButton(); //See Below
   }
   //Music Play Functions
-  if ( playButton == true ) {
-    println("Play My Song");
-    playButton=false; //reset Boolean for draw()
-  } else {
-    println(" ");
-  }
+  /* Boolean Test of Concept
+   if ( playButton == true ) {
+   println("Play My Song");
+   playButton=false; //reset Boolean for draw()
+   } else {
+   println(" ");
+   }
+   */
+  if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
+    //Note, change to "Is the Song Playing Boolean"
+    if ( playButton == false ) {
+      playButton = true;
+      println("Wahoo! I'm playing you");
+    } else {
+      playButton = false;
+      println(" ");
+    }
+    //if ( playButton == true ) playButtonActive();
+    //if ( playButton == false ) playButtonReady();
+  } // End Play Button
 } //End Mouse Pressed
 //
 void keyPressed() {
