@@ -1,6 +1,7 @@
 /* Creating Buttons - HoverOver in draw()
  - Add Minim from Sketch / Import Library / Minim
  - Display: fullScreen() v. use shorter side as a Square based on fullScreen
+ - DIVs and Global Variables, includes DIV Population
  */
 //
 //Library - Minim
