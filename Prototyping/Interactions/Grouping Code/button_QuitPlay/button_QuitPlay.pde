@@ -42,7 +42,7 @@ void setup() {
   playSymbolX3 = playSymbolX1;
   playSymbolY3 = playDivY + playDivHeight * 3/4;
   //
-  //DIVs
+  //DIVs: human verification of variables
   rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
   rect(playDivX, playDivY, playDivWidth, playDivHeight);
   triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
