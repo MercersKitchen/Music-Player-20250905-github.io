@@ -23,7 +23,6 @@ Boolean nightMode=false;
 void setup() {
   //Display
   size(500, 400);
-  //fullScreen();
   appWidth = width;
   appHeight = height;
   //
