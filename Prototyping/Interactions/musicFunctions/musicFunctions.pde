@@ -43,13 +43,10 @@ void setup() {
   appWidth = displayWidth;
   appHeight = displayHeight;
   //
-  //DIV Population
+  divPopulation();
+  DIVs(); //See Buttons
+  musicButtonShapes();
   
-  //
-  //DIVs: human verification of variables
-  rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
-  rect(playDivX, playDivY, playDivWidth, playDivHeight);
-  triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
   //
   //Colour Population
   nightMode=false;
