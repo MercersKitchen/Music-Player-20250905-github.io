@@ -46,8 +46,9 @@ void setup() {
   divPopulation();
   DIVs(); //See Buttons
   musicButtonShapes();
-  colourPopulation();
   nightMode=false; //initialization in setup() only
+  colourPopulation();
+  
   
   
   
