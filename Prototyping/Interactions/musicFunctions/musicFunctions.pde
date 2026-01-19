@@ -48,12 +48,6 @@ void setup() {
   musicButtonShapes();
   nightMode=false; //initialization in setup() only
   colourPopulation();
-  
-  
-  
-  
-  
-  
   //
 } //End setup
 //
