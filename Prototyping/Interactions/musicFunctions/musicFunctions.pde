@@ -28,14 +28,14 @@ color quitBackground, quitBackgroundActivated;
 Boolean nightMode=false;
 /*
 void settings() {
-  println(displayWidth, displayHeight);
-  int shorterSide = ( displayWidth > displayHeight ) ? displayHeight : displayWidth ; //Ternary Operator
-  shorterSide *= 0.9; //90%, WINDOW Frame
-  size(shorterSide, shorterSide); //ERROR IllegalStateException: cannot use a var in size()
-  println("Display Questions", displayWidth, displayHeight, shorterSide);
-  println("CANVAS Size Key Variables for setup()", width, height);
-} //End settings
-*/
+ println(displayWidth, displayHeight);
+ int shorterSide = ( displayWidth > displayHeight ) ? displayHeight : displayWidth ; //Ternary Operator
+ shorterSide *= 0.9; //90%, WINDOW Frame
+ size(shorterSide, shorterSide); //ERROR IllegalStateException: cannot use a var in size()
+ println("Display Questions", displayWidth, displayHeight, shorterSide);
+ println("CANVAS Size Key Variables for setup()", width, height);
+ } //End settings
+ */
 void setup() {
   //Display CANVAS
   //size(); //width //height
@@ -54,20 +54,7 @@ void setup() {
 void draw() {
   //println ("My Mouse is", mouseX, mouseY);
   //println (playButton);
-  //Button HoverOver
-  if ( mouseX>quitDivX && mouseX<quitDivX+quitDivWidth && mouseY>quitDivY &&mouseY<quitDivY+quitDivHeight ) {
-    quitButtonActive();
-  } else {
-    quitButtonRegular();
-  }//End Quit Button Hover Over
-  if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
-    if ( playButton == false ) playButtonActive();
-  } else {
-    //Order of below creates optical illusion - switching colours
-    playButtonReady();
-    if ( playButton == true ) playButtonActive();
-  }//End Play Button Hover Over
-  //
+  hoverOver_draw(); //See Buttons
 } //End draw
 //
 void mousePressed() {

@@ -1,7 +1,8 @@
 /* Buttons
  - quitButton
- * DIVs
+ - DIVs
  - musicButtonShapes, 2-D Music Buttons
+ - hoverOver_draw(), Hoverover for buttons, draw()
  */
 //
 void quitButton() {
@@ -24,14 +25,14 @@ void quitButtonActive() {
   rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
   fill(resetBackground);
   fill(quitButtonInk);
-  
-  
-    //AKWARD
+
+
+  //AKWARD
   //Note: rect() starts top-right corner, text() starts bottom-right corner
   text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5); //adjust fractions or decimals until working
-  
-  
-  
+
+
+
   fill(resetInk);
 } //End Quit Button Active
 //
@@ -40,16 +41,16 @@ void quitButtonRegular() {
   rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
   fill(resetBackground);
   fill(quitButtonInk);
-  
-  
-  
-    //AKWARD
+
+
+
+  //AKWARD
   //Note: rect() starts top-right corner, text() starts bottom-right corner
   text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5); //adjust fractions or decimals until working
-  
-  
-  
-  
+
+
+
+
   fill(resetInk);
 } //End Quit Button Active
 //
@@ -79,5 +80,22 @@ void playButtonReady() {
 
   fill(resetBackground);
 } // End Play Button Ready
+//
+void hoverOver_draw() {
+  //Button HoverOver
+  if ( mouseX>quitDivX && mouseX<quitDivX+quitDivWidth && mouseY>quitDivY &&mouseY<quitDivY+quitDivHeight ) {
+    quitButtonActive();
+  } else {
+    quitButtonRegular();
+  }//End Quit Button Hover Over
+  if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
+    if ( playButton == false ) playButtonActive();
+  } else {
+    //Order of below creates optical illusion - switching colours
+    playButtonReady();
+    if ( playButton == true ) playButtonActive();
+  }//End Play Button Hover Over
+  //
+} //End Hoverover, draw()
 //
 //End Buttons Subprogram
