@@ -14,3 +14,6 @@ Format Text from Mutliple Songs
 
 Reference of Programs being used
 
+---
+
+Alternate Key / currentSong++;
