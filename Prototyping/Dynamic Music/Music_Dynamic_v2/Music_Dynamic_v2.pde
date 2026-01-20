@@ -86,7 +86,7 @@ void mousePressed() {
 } //End Mouse Pressed
 //
 void keyPressed() {
-  playList[currentSong].loop(); //DRAW is deactived by noLoop()
+  playList[currentSong].play(); //DRAW is deactived by noLoop()
   currentSong++;
 } //End Key Pressed
 //
