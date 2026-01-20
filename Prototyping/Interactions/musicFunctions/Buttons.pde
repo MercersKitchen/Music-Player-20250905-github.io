@@ -17,6 +17,12 @@ void DIVs() {
   rect(playDivX, playDivY, playDivWidth, playDivHeight);
 } //End DIVs
 //
+void quitDIV() {
+} // End Quit Button DIV
+//
+void playDIV() {
+} // End Plauy Button DIV
+//
 void musicButtonShapes() {
   triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
 } // End Msuic Button Shapes
