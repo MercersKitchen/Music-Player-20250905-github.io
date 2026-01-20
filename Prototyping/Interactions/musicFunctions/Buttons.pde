@@ -23,58 +23,42 @@ void musicButtonShapes() {
 //
 void quitButtonActive() {
   fill(quitBackgroundActivated);
-  
-  
-  
+
+
+
   //AKWARD
   rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
-  
-  
+
+
   fill(resetBackground);
   fill(quitButtonInk);
-
-
-  //AKWARD
-  //Note: rect() starts top-right corner, text() starts bottom-right corner
-  text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5); //adjust fractions or decimals until working
-
-
-
+  easyTextQuitButton();
   fill(resetInk);
 } //End Quit Button Active
 //
 void quitButtonRegular() {
   fill(quitBackground);
-  
-  
+
+
   //AKWARD
   rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
-  
-  
-  
+
+
+
   fill(resetBackground);
   fill(quitButtonInk);
-
-
-
-  //AKWARD
-  //Note: rect() starts top-right corner, text() starts bottom-right corner
-  text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5); //adjust fractions or decimals until working
-
-
-
-
+  easyTextQuitButton();
   fill(resetInk);
 } //End Quit Button Active
 //
 void playButtonActive() {
   fill(playColourBackgroundActivated);
-  
+
   //AKWARD
   rect(playDivX, playDivY, playDivWidth, playDivHeight);
-  
-  
-  
+
+
+
   fill(playColourSymbolActivated);
 
 
@@ -88,13 +72,13 @@ void playButtonActive() {
 //
 void playButtonReady() {
   fill(playColourBackground);
-  
-  
+
+
   //AKWARD
   rect(playDivX, playDivY, playDivWidth, playDivHeight);
-  
-  
-  
+
+
+
   fill(playColourSymbol);
 
   //AKWARD
