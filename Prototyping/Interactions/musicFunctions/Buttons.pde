@@ -13,29 +13,29 @@ void quitButton() {
 }//End Quit Button
 //
 void DIVs() {
-  rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
-  rect(playDivX, playDivY, playDivWidth, playDivHeight);
+  quitDIV();
+  playDIV();
 } //End DIVs
 //
 void quitDIV() {
+  rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
 } // End Quit Button DIV
 //
 void playDIV() {
+  rect(playDivX, playDivY, playDivWidth, playDivHeight);
 } // End Plauy Button DIV
 //
-void musicButtonShapes() {
+void playButtonSymbol() {
   triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
+} //End Play Button Symbol
+//
+void musicButtonShapes() {
+  playButtonSymbol();
 } // End Msuic Button Shapes
 //
 void quitButtonActive() {
   fill(quitBackgroundActivated);
-
-
-
-  //AKWARD
-  rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
-
-
+  quitDIV();
   fill(resetBackground);
   fill(quitButtonInk);
   easyTextQuitButton();
@@ -44,13 +44,7 @@ void quitButtonActive() {
 //
 void quitButtonRegular() {
   fill(quitBackground);
-
-
-  //AKWARD
-  rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
-
-
-
+  quitDIV();
   fill(resetBackground);
   fill(quitButtonInk);
   easyTextQuitButton();
@@ -59,39 +53,17 @@ void quitButtonRegular() {
 //
 void playButtonActive() {
   fill(playColourBackgroundActivated);
-
-  //AKWARD
-  rect(playDivX, playDivY, playDivWidth, playDivHeight);
-
-
-
+  playDIV();
   fill(playColourSymbolActivated);
-
-
-  //AKWARD
-  triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
-
-
-
+  playButtonSymbol();
   fill(resetBackground);
 } // End Play Button Active
 //
 void playButtonReady() {
   fill(playColourBackground);
-
-
-  //AKWARD
-  rect(playDivX, playDivY, playDivWidth, playDivHeight);
-
-
-
+  playDIV();
   fill(playColourSymbol);
-
-  //AKWARD
-  triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
-
-
-
+  playButtonSymbol();
   fill(resetBackground);
 } // End Play Button Ready
 //
