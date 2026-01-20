@@ -3,6 +3,7 @@
  - DIVs
  - musicButtonShapes, 2-D Music Buttons
  - hoverOver_draw(), Hoverover for buttons, draw()
+ - TBA
  */
 //
 void quitButton() {
@@ -22,7 +23,13 @@ void musicButtonShapes() {
 //
 void quitButtonActive() {
   fill(quitBackgroundActivated);
+  
+  
+  
+  //AKWARD
   rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
+  
+  
   fill(resetBackground);
   fill(quitButtonInk);
 
@@ -38,7 +45,13 @@ void quitButtonActive() {
 //
 void quitButtonRegular() {
   fill(quitBackground);
+  
+  
+  //AKWARD
   rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
+  
+  
+  
   fill(resetBackground);
   fill(quitButtonInk);
 
@@ -56,7 +69,12 @@ void quitButtonRegular() {
 //
 void playButtonActive() {
   fill(playColourBackgroundActivated);
+  
+  //AKWARD
   rect(playDivX, playDivY, playDivWidth, playDivHeight);
+  
+  
+  
   fill(playColourSymbolActivated);
 
 
@@ -70,7 +88,13 @@ void playButtonActive() {
 //
 void playButtonReady() {
   fill(playColourBackground);
+  
+  
+  //AKWARD
   rect(playDivX, playDivY, playDivWidth, playDivHeight);
+  
+  
+  
   fill(playColourSymbol);
 
   //AKWARD
