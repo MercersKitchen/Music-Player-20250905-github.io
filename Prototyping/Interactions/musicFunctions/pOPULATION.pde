@@ -3,6 +3,8 @@
  - colourPopulation(), Colour Population
  - TBA
  */
+//Global Varaibles
+float stringDivX, stringDivY, stringDivWidth, stringDivHeight;
 //
 void divPopulation() {
   quitDivX = appWidth * 9/10;
