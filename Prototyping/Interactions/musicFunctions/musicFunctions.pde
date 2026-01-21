@@ -50,6 +50,7 @@ void setup() {
   nightMode=false; //initialization in setup() only
   colourPopulation();
   musicSetup();
+  textSetup();
   //
 } //End setup
 //
