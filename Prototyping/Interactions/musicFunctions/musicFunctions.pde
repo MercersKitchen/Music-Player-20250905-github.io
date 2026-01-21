@@ -49,6 +49,7 @@ void setup() {
   musicButtonShapes();
   nightMode=false; //initialization in setup() only
   colourPopulation();
+  musicSetup();
   //
 } //End setup
 //
@@ -75,9 +76,8 @@ void keyPressed() {
   if (key=='D' || key=='d') {
     colourPopulation();
   } //Night Mode
-  
-  
-  
+  //
+  //
   /* Key Board Short Cuts ... learning what the Music Buttons could be
    Note: CAP Lock with ||
    if ( key==? || key==? ) ; //'' only
