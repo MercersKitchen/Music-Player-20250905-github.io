@@ -2,6 +2,8 @@
  - Easy Text, default font, size
  - TBA
  */
+//Global Variables
+String songTitle;
 //
 void easyTextQuitButton() {
   //Note: rect() starts top-right corner, text() starts bottom-right corner
