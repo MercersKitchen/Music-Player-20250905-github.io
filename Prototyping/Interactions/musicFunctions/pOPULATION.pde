@@ -5,6 +5,7 @@
  */
 //Global Varaibles
 float stringDivX, stringDivY, stringDivWidth, stringDivHeight;
+color resetBlackink, resetWhiteInk,  purpleInk;
 //
 void divPopulation() {
   quitDivX = appWidth * 9/10;
@@ -69,6 +70,11 @@ void colourPopulation() {
     quitBackgroundActivated = red;
     quitButtonInk = black;
   } //End Night Mode Colors
+  //
+  //Ink
+  resetBlackink = black;
+  resetWhiteInk = white;
+  purpleInk = #2C08FF;
 } //End Colour Population
 //
 // End Subprogram Population
