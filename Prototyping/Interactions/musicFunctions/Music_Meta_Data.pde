@@ -18,7 +18,8 @@
  Publisher: meta.publisher()
  Encoded: meta.encoded()
  */
-//Global Varaible
+//Global Variable
+AudioMetaData[] playListMetaData = new AudioMetaData[ numberOfSongs ];
 //
 void testMetaData() {
   //Print What is available on a particular song
