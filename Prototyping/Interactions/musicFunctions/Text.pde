@@ -5,6 +5,7 @@
 //Global Variables
 String songTitle;
 float fontSize;
+PFont titleFont;
 //
 void easyTextQuitButton() {
   //Note: rect() starts top-right corner, text() starts bottom-right corner
@@ -20,7 +21,6 @@ void textSetup() {
    //Tools / Create Font / Find Font / Do Not Press "OK", known conflict between loadFont() and createFont()
    */
   fontSize = appHeight;
-  PFont titleFont;
   String harrington = "Harrington";
   titleFont = createFont(harrington, fontSize);
   //
