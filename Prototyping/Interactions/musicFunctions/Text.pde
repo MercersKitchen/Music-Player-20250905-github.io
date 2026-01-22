@@ -29,4 +29,8 @@ void textSetup() {
   //
 } //End Text Setup
 //
+void textdraw() {
+  
+} //End Text Draw
+//
 //End Subprogram Text
