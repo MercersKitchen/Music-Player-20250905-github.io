@@ -4,6 +4,7 @@
  */
 //Global Variables
 String songTitle;
+float fontSize;
 //
 void easyTextQuitButton() {
   //Note: rect() starts top-right corner, text() starts bottom-right corner
@@ -18,7 +19,7 @@ void textSetup() {
    //Spelling Counts and must compare CONSOLE v Tools / Create Font / Create Font Spelling
    //Tools / Create Font / Find Font / Do Not Press "OK", known conflict between loadFont() and createFont()
    */
-  float fontSize = appHeight;
+  fontSize = appHeight;
   PFont titleFont;
   String harrington = "Harrington";
   titleFont = createFont(harrington, fontSize);
@@ -30,7 +31,10 @@ void textSetup() {
 } //End Text Setup
 //
 void textdraw() {
-  
+  fill(purpleInk); //Ink, hexidecimal copied from Color Selector
+  textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
+  //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
+  textFont(titleFont, fontSize); //see variable note
 } //End Text Draw
 //
 //End Subprogram Text
