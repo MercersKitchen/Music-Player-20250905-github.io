@@ -72,9 +72,9 @@ void colourPopulation() {
   } //End Night Mode Colors
   //
   //Ink
-  resetBlackink = black;
+  resetBlackink = black; //Night Mode Ink
   resetWhiteInk = white;
-  purpleInk = #2C08FF;
+  purpleInk = #2C08FF; //Day Mode Ink
 } //End Colour Population
 //
 // End Subprogram Population
