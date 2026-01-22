@@ -51,7 +51,7 @@ void setup() {
   colourPopulation();
   musicSetup();
   textSetup();
-  //testMetaData(); //Note: println only
+  testMetaData(); //Note: println only
   //
 } //End setup
 //
@@ -59,6 +59,10 @@ void draw() {
   //println ("My Mouse is", mouseX, mouseY);
   //println (playButton);
   hoverOver_draw(); //See Buttons
+  //
+  saveSongTitle(); //See Music Meta Data
+  drawText();
+  //
 } //End draw
 //
 void mousePressed() {
@@ -76,6 +80,11 @@ void keyPressed() {
     quitButton();  //See Below
   } //Quit Button
   if (key=='D' || key=='d') {
+    if ( nightMode == false ) {
+      nightMode = true;
+    } else {
+      nightMode = false;
+    }
     colourPopulation();
   } //Night Mode
   //

@@ -37,6 +37,7 @@ void musicSetup() {
   for ( int i=0; i<numberOfSongs; i++ ) {
     file = musicDirectory + songName[i] + fileExtension_mp3;
     playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+    metaDataFileLoading(); //See Meta Data Subprogram
     currentSong++;
   } //End File Loading
   currentSong=0;

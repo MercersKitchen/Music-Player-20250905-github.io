@@ -18,8 +18,13 @@
  Publisher: meta.publisher()
  Encoded: meta.encoded()
  */
-//Global Variable
+//Global Variable, See Music
 AudioMetaData[] playListMetaData = new AudioMetaData[ numberOfSongs ];
+String currentSongFileName;
+//
+void metaDataFileLoading() { //See Music / FOR / playList[ currentSong ] = minim.loadFile( file )
+  playListMetaData[ currentSong ] = playList[ currentSong ].getMetaData();
+} //End Meta Data File Loading
 //
 void testMetaData() {
   //Print What is available on a particular song
@@ -43,4 +48,16 @@ void testMetaData() {
   println( "Encoded: " + playListMetaData[currentSong].encoded() );
 } //End Test Meta Data
 //
+void saveSongTitle() {
+  //See draw()
+  //Note: See Music Loading if NULL
+  if ( playList[currentSong].isPlaying() == true) {
+    titleDIV();
+    songTitle = playListMetaData[currentSong].title(); //Used to switch titles in draw()
+    //println("Check VAR currentSongFileName", currentSongFileName);
+  } else {
+    titleDIV();
+    songTitle = "Nothing Playing Yet!";
+  }
+} //End Print Song Title in draw()
 //End Subprogram Music Meta Data

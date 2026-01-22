@@ -5,7 +5,8 @@
  */
 //Global Varaibles
 float stringDivX, stringDivY, stringDivWidth, stringDivHeight;
-color resetBlackink, resetWhiteInk,  purpleInk;
+color titleInk;
+color purpleInk;
 //
 void divPopulation() {
   quitDivX = appWidth * 9/10;
@@ -42,11 +43,13 @@ void colourPopulation() {
   //println("Casting answer is:", resetInkNight); //Exactly 192, no rounding invovled, checked on calculator
   //Button Colours: layering local variables leads to preferences controled by Booleans
   color red = #FF0000;
-  color purple = #9D03FF; //human name for hexidecimal code
+  color purple1 = #9D03FF; //human name for hexidecimal code
   color yellow = #FFFF00;
+  color purple2 = #2C08FF; //Day Mode Ink
   color darkGray = grayScale;
   color ligthGray = gray;
   //Note: able to use a Ternary Operator but ineffiecient
+  println("Night Mode Boolean", nightMode);
   if ( nightMode == true ) {
     resetBackground = resetBackgroundNight;
     resetInk = resetInkNight;
@@ -57,24 +60,22 @@ void colourPopulation() {
     quitBackground = ligthGray;
     quitBackgroundActivated = red;
     quitButtonInk = darkGray;
+    titleInk = darkGray;
   } else
   {
     //Previously the Day Colour Assignments
     resetBackground = resetBackgroundDay;
     resetInk = black;
-    playColourBackground = purple;
+    playColourBackground = purple1;
     playColourSymbol = yellow;
     playColourBackgroundActivated = yellow;
-    playColourSymbolActivated = purple;
+    playColourSymbolActivated = purple1;
     quitBackground = white;
     quitBackgroundActivated = red;
     quitButtonInk = black;
+    titleInk = purple2;
   } //End Night Mode Colors
   //
-  //Ink
-  resetBlackink = black; //Night Mode Ink
-  resetWhiteInk = white;
-  purpleInk = #2C08FF; //Day Mode Ink
 } //End Colour Population
 //
 // End Subprogram Population
