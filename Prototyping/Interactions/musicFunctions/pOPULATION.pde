@@ -3,10 +3,6 @@
  - colourPopulation(), Colour Population
  - TBA
  */
-//Global Varaibles
-float stringDivX, stringDivY, stringDivWidth, stringDivHeight;
-color titleInk;
-color purpleInk;
 //
 void divPopulation() {
   quitDivX = appWidth * 9/10;
@@ -49,7 +45,7 @@ void colourPopulation() {
   color darkGray = grayScale;
   color ligthGray = gray;
   //Note: able to use a Ternary Operator but ineffiecient
-  println("Night Mode Boolean", nightMode);
+  //println("Night Mode Boolean", nightMode);
   if ( nightMode == true ) {
     resetBackground = resetBackgroundNight;
     resetInk = resetInkNight;

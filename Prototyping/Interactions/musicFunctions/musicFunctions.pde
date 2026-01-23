@@ -14,19 +14,6 @@ import ddf.minim.ugens.*;
 //
 //Global Variables
 //All Global Variables execute first ... A global Variable is a Global Variable
-int appWidth, appHeight;
-float quitDivX, quitDivY, quitDivWidth, quitDivHeight;
-float playDivX, playDivY, playDivWidth, playDivHeight;
-float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3;
-//
-Boolean playButton=false, quitButton=false;
-//
-color resetBackground, resetInk, resetBackgroundDay, resetInkDay, resetBackgroundNight, resetInkNight;
-color quitButtonInk;
-color playColourBackground, playColourSymbol, playColourBackgroundActivated, playColourSymbolActivated;
-color quitBackground, quitBackgroundActivated;
-Boolean nightMode=false;
-//
 /*
 void settings() {
  println(displayWidth, displayHeight);

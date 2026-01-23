@@ -18,9 +18,6 @@
  Publisher: meta.publisher()
  Encoded: meta.encoded()
  */
-//Global Variable, See Music
-AudioMetaData[] playListMetaData = new AudioMetaData[ numberOfSongs ];
-String currentSongFileName;
 //
 void metaDataFileLoading() { //See Music / FOR / playList[ currentSong ] = minim.loadFile( file )
   playListMetaData[ currentSong ] = playList[ currentSong ].getMetaData();
@@ -32,6 +29,7 @@ void testMetaData() {
   println();
   println( "File Name: " + playListMetaData[currentSong].fileName() );
   println( "Length (in milliseconds): " + playListMetaData[currentSong].length() );
+  println( "Length (in seconds): " + ( playListMetaData[currentSong].length() )/1000 );
   println( "Title: " + playListMetaData[currentSong].title() );
   println( "Author: " + playListMetaData[currentSong].author() );
   println( "Album: " + playListMetaData[currentSong].album() );
