@@ -50,11 +50,11 @@ void saveSongTitle() {
   //See draw()
   //Note: See Music Loading if NULL
   if ( playList[currentSong].isPlaying() == true) {
-    titleDIV();
+    //titleDIV();
     songTitle = playListMetaData[currentSong].title(); //Used to switch titles in draw()
     //println("Check VAR currentSongFileName", currentSongFileName);
   } else {
-    titleDIV();
+    //titleDIV();
     songTitle = "Nothing Playing Yet!";
   }
 } //End Print Song Title in draw()
