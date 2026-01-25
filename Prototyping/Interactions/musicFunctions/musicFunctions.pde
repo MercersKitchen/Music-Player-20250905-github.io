@@ -2,6 +2,15 @@
  - Add Minim from Sketch / Import Library / Minim
  - Display: fullScreen() v. use shorter side as a Square based on fullScreen
  - DIVs and Global Variables, includes DIV Population
+ - Music Button Shapes
+ - Colours and Hoverover Feedback
+ - Sound Effects and Music Playing (students to build Quit Button Sound)
+ - Text and using Meta Data
+ 
+ - CAUTION: Text shows the song cued to play, not when the song is playing
+ - It's an Odd Algorithm meant for grading purposes
+ - Use this algorithm only as a guide to make another one
+ 
  */
 //
 //Library - Minim
