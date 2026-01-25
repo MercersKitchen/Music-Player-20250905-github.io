@@ -1,7 +1,6 @@
 /* Population, 
  - divPopulation
  - colourPopulation(), Colour Population
- - TBA
  */
 //
 void divPopulation() {

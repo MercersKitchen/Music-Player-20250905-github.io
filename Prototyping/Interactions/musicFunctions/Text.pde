@@ -1,6 +1,9 @@
 /* Text
+ - Draw Text, partly references functions below
  - Easy Text, default font, size
- - TBA
+ - textSetup
+ - textDraw
+ - songTitle
  */
 //
 void drawText() {
